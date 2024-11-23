@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post on </title>
+    <link>//localhost:1313/tags/post/</link>
+    <description>Recent content in Post on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Knight 2024</title>
+      <link>//localhost:1313/posts/ctf-writeups/knight24/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/knight24/</guid>
+      <description>writeups</description>
+    </item>
+    <item>
+      <title>Buckeye CTF 2023</title>
+      <link>//localhost:1313/posts/ctf-writeups/buckeye-2023/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/buckeye-2023/</guid>
+      <description>writeups</description>
+    </item>
+    <item>
+      <title>UIUCTF 2023</title>
+      <link>//localhost:1313/posts/ctf-writeups/uiuctf/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/uiuctf/</guid>
+      <description>writeups</description>
+    </item>
+    <item>
+      <title>Africa battle ctf 2023</title>
+      <link>//localhost:1313/posts/ctf-writeups/africa/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/africa/</guid>
+      <description>writeups</description>
+    </item>
+  </channel>
+</rss>

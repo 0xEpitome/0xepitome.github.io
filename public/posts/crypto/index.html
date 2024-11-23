@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/bundle.min.145453261a7755f5042a854c4213501d215a8fbe34c08d181c40f803f1315e74.js"></script>
+
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="icon" href=images/tanjiro-modified.png>
+
+    
+    
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+
+
+<!-- Open Graph image and Twitter Card metadata -->
+
+<title itemprop="name">Epitome&#39;s Realm - Cryptominer Based Security Events in AWS</title>
+<meta property="og:title" content=Epitome&#39;s&#32;Realm&#32;-&#32;Cryptominer&#32;Based&#32;Security&#32;Events&#32;in&#32;AWS />
+<meta name="twitter:title" content=Epitome&#39;s&#32;Realm&#32;-&#32;Cryptominer&#32;Based&#32;Security&#32;Events&#32;in&#32;AWS />
+<meta itemprop="name" content=Epitome&#39;s&#32;Realm&#32;-&#32;Cryptominer&#32;Based&#32;Security&#32;Events&#32;in&#32;AWS />
+<meta name="application-name" content=Epitome&#39;s&#32;Realm&#32;-&#32;Cryptominer&#32;Based&#32;Security&#32;Events&#32;in&#32;AWS />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="Cryptominer Based Security Events using AWS Tools" />
+<meta itemprop="description" content="Cryptominer Based Security Events using AWS Tools" />
+<meta property="og:description" content="Cryptominer Based Security Events using AWS Tools" />
+<meta name="twitter:description" content="Cryptominer Based Security Events using AWS Tools" />
+
+
+<base href="//localhost:1313/posts/crypto/" />
+<link rel="canonical" href="//localhost:1313/posts/crypto/" itemprop="url" />
+<meta name="url" content="//localhost:1313/posts/crypto/" />
+<meta name="twitter:url" content="//localhost:1313/posts/crypto/" />
+<meta property="og:url" content="//localhost:1313/posts/crypto/" />
+
+
+<meta property="og:updated_time" content="2024-11-04T00:00:00Z" />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='//localhost:1313/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+
+  
+    <meta name="twitter:site" content="@0xEpitome" />
+    <meta name="twitter:creator" content="@0xEpitome" />
+
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.135.0">
+
+
+    
+    
+
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.94a339836f89f0d25f31980cb6b0631da21e20af128308747ce44e0525eb16ef.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5A5A5A;
+        --link-color: #268BD2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #000;
+        --code-background-color: #E5E5E5;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #EEE;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9D9D9D;
+        --link-color: #268BD2;
+        --date-color: #9A9A9A;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #FFF;
+        --code-background-color: #515151;
+        --code-block-color: #FFF;
+        --code-block-background-color: #272822;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="dark-theme">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark" title="Toggle light/dark mode">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="//localhost:1313/">
+                <img src="/images/tanjiro-modified.png" alt="brand image">
+            </a>
+        
+        
+            <a href="//localhost:1313/">
+                <h1>Epitome&#39;s Realm</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    SOC Analyst | CTF Player | Malware Analysis
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                            <li class="heading">
+                                <a href="/about/">About</a>
+                            </li>
+                            
+                    
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+        
+            
+
+            
+                
+                
+            
+                
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="//localhost:1313/posts/crypto/">Cryptominer Based Security Events in AWS</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="//localhost:1313/posts/cryptominer/">Cryptominer Based Security Events in AWS</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="//localhost:1313/posts/ctf-writeups/knight24/">Knight 2024</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="//localhost:1313/posts/ctf-writeups/buckeye-2023/">Buckeye CTF 2023</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="//localhost:1313/posts/ctf-writeups/uiuctf/">UIUCTF 2023</a>
+                            </li>
+                        
+                    
+                
+            
+            
+                
+                
+            
+                
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+                        
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" title="GitHub" href="https://github.com/0xEpitome">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="LinkedIn" href="https://linkedin.com/in/moses-kariuki-irungu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" title="X" href="https://x.com/0xEpitome">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" viewBox="0 0 512 472.799">
+            <path fill="currentColor" d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"/>
+        </svg>
+    </a>
+
+
+
+
+    <a target="_blank" class="social" title="HackTheBox" href="https://app.hackthebox.com/profile/1259902">
+        <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="1.4em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="m22.51 6.457l.001-.013a.9.9 0 0 0-.271-.638l-.027-.024q-.028-.025-.057-.048q-.03-.022-.06-.04l-.029-.02l-9.61-5.547a.89.89 0 0 0-.922.004L1.933 5.674l-.03.02l-.023.014l-.02.015a1 1 0 0 0-.147.134l-.003.003a.9.9 0 0 0-.221.584v.014l-.001.027v11.07c0 .328.18.63.469.784l9.599 5.542l.023.011a1 1 0 0 0 .166.07l.04.01l.072.015l.035.006a.8.8 0 0 0 .216 0q.018-.002.035-.006l.072-.014l.04-.012l.064-.022a1 1 0 0 0 .102-.047l.023-.011l9.599-5.542a.89.89 0 0 0 .469-.784V6.478zM5.255 6.082l6.537-3.774a.42.42 0 0 1 .418 0l6.537 3.774a.418.418 0 0 1 0 .725l-6.537 3.774a.42.42 0 0 1-.418 0L5.254 6.807a.418.418 0 0 1 0-.725m5.614 14.345a.417.417 0 0 1-.626.361l-6.524-3.766a.42.42 0 0 1-.209-.361V9.127a.417.417 0 0 1 .626-.361l6.524 3.766a.42.42 0 0 1 .209.362zm9.623-3.766a.42.42 0 0 1-.209.36l-6.524 3.767a.417.417 0 0 1-.626-.36v-7.533c0-.15.08-.287.209-.362l6.524-3.766a.417.417 0 0 1 .626.36z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="TryHackMe" href="https://tryhackme.com/r/p/0x3pitom3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" >
+            <path fill="white" d="M10.705 0C7.54 0 4.902 2.285 4.349 5.291a4.525 4.525 0 0 0-4.107 4.5 4.525 4.525 0 0 0 4.52 4.52h6.761a.625.625 0 1 0 0-1.25H4.761a3.273 3.273 0 0 1-3.27-3.27A3.273 3.273 0 0 1 6.59 7.08a.625.625 0 0 0 .7-1.035 4.488 4.488 0 0 0-1.68-.69 5.223 5.223 0 0 1 5.096-4.104 5.221 5.221 0 0 1 5.174 4.57 4.489 4.489 0 0 0-.488.305.625.625 0 1 0 .731 1.013 3.245 3.245 0 0 1 1.912-.616 3.278 3.278 0 0 1 3.203 2.61.625.625 0 0 0 1.225-.251 4.533 4.533 0 0 0-4.428-3.61 4.54 4.54 0 0 0-.958.105C16.556 2.328 13.9 0 10.705 0zm5.192 10.64a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.054.514c0 .181.018.353.054.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .309-.296c.08-.124.137-.267.173-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.309-.291.917.917 0 0 0-.46-.108zm6.486 0a.925.925 0 0 0-.462.108.913.913 0 0 0-.313.29 1.27 1.27 0 0 0-.175.427 2.39 2.39 0 0 0-.053.514c0 .181.017.353.053.517.036.164.095.307.175.43a.899.899 0 0 0 .313.297c.127.073.281.11.462.11.18 0 .334-.037.46-.11a.897.897 0 0 0 .31-.296c.078-.124.136-.267.172-.431.036-.164.054-.336.054-.517 0-.18-.018-.352-.054-.514a1.271 1.271 0 0 0-.173-.426.901.901 0 0 0-.308-.291.916.916 0 0 0-.461-.108zm-8.537.068l-.84.618.313.43.476-.368v1.877h.603v-2.557zm6.486 0l-.841.618.314.43.477-.368v1.877h.603v-2.557zm-4.435.445c.08 0 .143.028.193.084.05.057.087.127.114.21.026.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.028.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.248.248 0 0 1-.195-.086.584.584 0 0 1-.118-.209 1.245 1.245 0 0 1-.056-.27 2.645 2.645 0 0 1 0-.533c.01-.096.029-.186.056-.27a.583.583 0 0 1 .118-.209.25.25 0 0 1 .195-.084zm6.486 0c.08 0 .144.028.193.084.05.057.087.127.114.21.027.083.044.173.054.269a2.541 2.541 0 0 1 0 .533c-.01.097-.027.187-.054.27a.584.584 0 0 1-.114.21.243.243 0 0 1-.193.085.249.249 0 0 1-.195-.086.581.581 0 0 1-.117-.209 1.245 1.245 0 0 1-.056-.27 2.642 2.642 0 0 1 0-.533c.01-.096.028-.186.056-.27a.58.58 0 0 1 .117-.209.25.25 0 0 1 .195-.084zm-2.191 3.51a.93.93 0 0 0-.463.109.908.908 0 0 0-.312.291c-.08.122-.139.263-.175.426a2.383 2.383 0 0 0-.054.514c0 .18.018.353.054.516.036.164.094.308.175.432a.91.91 0 0 0 .312.296.92.92 0 0 0 .463.11c.18 0 .333-.037.46-.11a.892.892 0 0 0 .308-.296 1.32 1.32 0 0 0 .174-.432c.036-.163.054-.335.054-.516 0-.18-.018-.352-.054-.514a1.274 1.274 0 0 0-.174-.426.89.89 0 0 0-.309-.291.918.918 0 0 0-.46-.108zm-6.402.07l-.841.617.314.43.476-.369v1.878h.604v-2.557zm2.125 0l-.841.617.314.43.477-.369v1.878h.603v-2.557zm2.116 0l-.84.617.313.43.477-.369v1.878h.603v-2.557zm2.16.443c.08 0 .144.028.194.085a.605.605 0 0 1 .114.21c.026.083.044.172.053.269a2.639 2.639 0 0 1 0 .532 1.28 1.28 0 0 1-.053.27.585.585 0 0 1-.114.21.244.244 0 0 1-.193.085.25.25 0 0 1-.196-.085.589.589 0 0 1-.117-.21 1.245 1.245 0 0 1-.056-.27 2.597 2.597 0 0 1 0-.532c.01-.097.028-.186.056-.27a.589.589 0 0 1 .117-.209.249.249 0 0 1 .196-.085zm-6.729 3.073a.676.676 0 0 0-.335.078.661.661 0 0 0-.227.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.93.93 0 0 0 .127.313.65.65 0 0 0 .227.215c.092.053.204.08.335.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .225-.215c.057-.09.1-.194.125-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.931.931 0 0 0-.125-.31.658.658 0 0 0-.225-.21.667.667 0 0 0-.334-.08zm3.086 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.907.907 0 0 0-.127.31 1.69 1.69 0 0 0-.04.373c0 .131.013.256.04.375a.928.928 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08a.655.655 0 0 0 .334-.08.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.752 1.752 0 0 0 0-.748.94.94 0 0 0-.126-.31.657.657 0 0 0-.224-.21.667.667 0 0 0-.334-.08zm5.108 0a.675.675 0 0 0-.336.078.661.661 0 0 0-.226.211.91.91 0 0 0-.127.31c-.027.118-.04.242-.04.373s.013.256.04.375a.931.931 0 0 0 .127.313c.058.09.134.162.226.215.093.053.205.08.336.08.13 0 .243-.027.334-.08a.65.65 0 0 0 .224-.215c.058-.09.1-.194.126-.313a1.75 1.75 0 0 0 .04-.375c0-.13-.014-.255-.04-.373a.943.943 0 0 0-.126-.31.657.657 0 0 0-.224-.21.668.668 0 0 0-.334-.08zm-6.658.05l-.61.448.227.311.346-.266v1.362h.438v-1.856zm3.068 0l-.61.448.227.311.346-.266v1.362h.438v-1.856zm5.108 0l-.611.448.228.311.346-.266v1.362h.438v-1.856zm-9.712.322c.058 0 .105.02.14.062a.421.421 0 0 1 .083.151.96.96 0 0 1 .04.196 1.932 1.932 0 0 1 0 .386.954.954 0 0 1-.04.197.421.421 0 0 1-.083.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.427.427 0 0 1-.085-.153.887.887 0 0 1-.041-.197 1.96 1.96 0 0 1 0-.386.893.893 0 0 1 .04-.196.42.42 0 0 1 .086-.151.181.181 0 0 1 .141-.062zm3.086 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.94.94 0 0 1 .04.196 1.906 1.906 0 0 1 0 .386.93.93 0 0 1-.04.197.421.421 0 0 1-.082.152.176.176 0 0 1-.14.061.18.18 0 0 1-.141-.06.42.42 0 0 1-.086-.153.846.846 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.849.849 0 0 1 .041-.196.42.42 0 0 1 .086-.151.182.182 0 0 1 .141-.062zm5.108 0c.058 0 .104.02.14.062a.421.421 0 0 1 .082.151.92.92 0 0 1 .04.196 1.963 1.963 0 0 1 0 .386.943.943 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.061.18.18 0 0 1-.142-.06.437.437 0 0 1-.085-.153.95.95 0 0 1-.04-.197 1.965 1.965 0 0 1-.011-.195c0-.057.004-.121.01-.191a.959.959 0 0 1 .04-.196.47.47 0 0 1 .086-.151.181.181 0 0 1 .142-.062zm-1.684 1.814a.675.675 0 0 0-.336.079.66.66 0 0 0-.227.21.91.91 0 0 0-.127.31 1.731 1.731 0 0 0 0 .748.939.939 0 0 0 .127.314c.059.09.134.162.227.215.093.053.205.08.336.08a.66.66 0 0 0 .334-.08.648.648 0 0 0 .224-.215c.058-.09.1-.195.126-.314a1.737 1.737 0 0 0-.001-.747.928.928 0 0 0-.125-.31.65.65 0 0 0-.224-.211.668.668 0 0 0-.334-.079zm3.063 0a.676.676 0 0 0-.336.079.664.664 0 0 0-.227.21.906.906 0 0 0-.127.31 1.74 1.74 0 0 0 0 .748.936.936 0 0 0 .127.314.66.66 0 0 0 .227.215c.092.053.204.08.336.08a.654.654 0 0 0 .334-.08.648.648 0 0 0 .223-.215c.058-.09.1-.195.126-.314a1.74 1.74 0 0 0 0-.747.928.928 0 0 0-.126-.31.65.65 0 0 0-.223-.211.666.666 0 0 0-.334-.079zm-1.545.05l-.611.448.228.312.346-.267v1.363h.438v-1.856zm-1.518.323c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.91.91 0 0 1 .04.195 1.966 1.966 0 0 1 0 .387.951.951 0 0 1-.04.197.421.421 0 0 1-.082.152.177.177 0 0 1-.14.06.18.18 0 0 1-.142-.06.428.428 0 0 1-.085-.152.914.914 0 0 1-.04-.197 1.96 1.96 0 0 1-.011-.195c0-.058.003-.122.01-.192a.923.923 0 0 1 .041-.195c.02-.06.048-.11.085-.152a.181.181 0 0 1 .142-.061zm3.063 0c.057 0 .104.02.14.061a.42.42 0 0 1 .082.152.94.94 0 0 1 .04.195 1.91 1.91 0 0 1 0 .387.93.93 0 0 1-.04.197.422.422 0 0 1-.083.152.175.175 0 0 1-.14.06.18.18 0 0 1-.141-.06.423.423 0 0 1-.085-.152.907.907 0 0 1-.04-.197 1.95 1.95 0 0 1 0-.387.915.915 0 0 1 .04-.195c.02-.06.048-.11.085-.152a.182.182 0 0 1 .142-.061zm-9.713.185a.465.465 0 0 0-.232.055.456.456 0 0 0-.157.146.627.627 0 0 0-.089.215 1.168 1.168 0 0 0-.027.259c0 .09.009.177.027.26a.648.648 0 0 0 .089.216c.04.063.093.112.157.149a.459.459 0 0 0 .232.056c.09 0 .168-.02.231-.056a.45.45 0 0 0 .156-.149.67.67 0 0 0 .087-.217 1.218 1.218 0 0 0 0-.518.647.647 0 0 0-.087-.215.448.448 0 0 0-.156-.146.458.458 0 0 0-.23-.055zm1.052.035l-.423.31.158.217.24-.185v.944h.303v-1.286zm-1.052.224c.04 0 .073.014.097.042a.284.284 0 0 1 .057.105.69.69 0 0 1 .028.136c.004.049.007.092.007.133 0 .04-.003.086-.007.135a.684.684 0 0 1-.028.136.285.285 0 0 1-.057.105.123.123 0 0 1-.097.043.125.125 0 0 1-.098-.043.298.298 0 0 1-.059-.105.612.612 0 0 1-.028-.136 1.39 1.39 0 0 1 0-.268.62.62 0 0 1 .028-.136.297.297 0 0 1 .06-.105.125.125 0 0 1 .097-.042zm3.775 1.394a.463.463 0 0 0-.232.054.452.452 0 0 0-.157.146.621.621 0 0 0-.088.214 1.19 1.19 0 0 0 0 .519.641.641 0 0 0 .088.217.46.46 0 0 0 .157.15.458.458 0 0 0 .232.054.454.454 0 0 0 .232-.055.45.45 0 0 0 .155-.149.664.664 0 0 0 .087-.217 1.189 1.189 0 0 0 0-.519.642.642 0 0 0-.087-.214.446.446 0 0 0-.155-.146.459.459 0 0 0-.232-.054zm1.052.034l-.423.31.158.216.24-.185v.945h.303V22.68zm-1.052.223c.04 0 .073.014.098.043a.3.3 0 0 1 .057.105.643.643 0 0 1 .027.135 1.31 1.31 0 0 1 0 .268.654.654 0 0 1-.027.137.307.307 0 0 1-.057.105.124.124 0 0 1-.098.042.125.125 0 0 1-.098-.042.293.293 0 0 1-.059-.105.618.618 0 0 1-.028-.137 1.364 1.364 0 0 1 0-.268.612.612 0 0 1 .028-.135.287.287 0 0 1 .06-.105.123.123 0 0 1 .097-.043z"></path>
+        </svg>
+    </a>
+
+
+
+
+
+
+
+
+
+
+    <a target="_blank" class="social" title="RSS Feed" href="/posts/index.xml">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280.000000 1280.000000">
+            <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentColor">
+                <path d="M2295 11929 c-284 -12 -642 -45 -707 -65 -17 -5 -18 -63 -18 -1039 0 -569 4 -1036 8 -1039 5 -3 74 6 153 19 510 86 1168 95 1789 25 1348 -153 2602 -677 3670 -1531 385 -308 820 -744 1126 -1129 842 -1060 1362 -2313 1514 -3650 70 -621 61 -1279 -25 -1789 -13 -79 -22 -148 -19 -153 3 -4 471 -8 1039 -8 l1035 0 5 23 c51 225 85 942 67 1419 -23 605 -77 1044 -198 1617 -294 1400 -927 2734 -1823 3846 -1043 1295 -2364 2259 -3909 2854 -1158 447 -2451 656 -3707 600z"/>
+                <path d="M2255 7845 c-269 -25 -620 -81 -667 -106 -17 -9 -18 -55 -18 -899 0 -706 3 -890 13 -890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207 -107 2267 -823 2814 -1902 166 -327 268 -637 330 -1001 38 -227 48 -384 42 -662 -8 -348 -44 -590 -126 -831 -23 -66 -41 -126 -41 -132 0 -10 184 -13 890 -13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782 -59 703 -233 1323 -545 1945 -481 956 -1313 1788 -2270 2268 -620 310 -1239 483 -1940 542 -165 14 -669 10 -840 -5z"/>
+                <path d="M2519 3815 c-391 -66 -725 -336 -868 -703 -79 -201 -96 -462 -45 -677 83 -344 338 -641 666 -774 116 -47 205 -69 330 -80 412 -39 811 153 1040 500 193 292 240 648 128 981 -135 403 -492 699 -914 757 -100 14 -241 12 -337 -4z"/>
+            </g>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" title="Email" href="mailto://0xepitome@gmail.com">
+       <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 485.211 485.211">
+            <path fill="currentColor" d="M301.393,241.631L464.866,424.56H20.332l163.474-182.928l58.801,51.443L301.393,241.631z M462.174,60.651H23.027 l219.579,192.142L462.174,60.651z M324.225,221.67l160.986,180.151V80.792L324.225,221.67z M0,80.792v321.029L160.972,221.64 L0,80.792z"/>
+       </svg>
+    </a>
+
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2024 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+  <h1 class="post-title">
+    <a href="//localhost:1313/posts/crypto/">Cryptominer Based Security Events in AWS</a>
+  </h1>
+
+  <div class="headline">
+    <div>
+      
+      
+      <time datetime=" 2024-11-04T00:00:00Z" class="post-date">
+        November 4, 2024
+      </time>
+      
+      <span> - </span>
+      <span class="reading-time">
+        
+          
+        
+
+        <span>18 mins read</span>
+      </span>
+    </div>
+
+    
+    <ul class="tags">
+      
+      <li class="tag-AWS">
+        <a href="//localhost:1313/tags/aws">AWS</a>
+      </li>
+      
+      <li class="tag-Crypto">
+        <a href="//localhost:1313/tags/crypto">Crypto</a>
+      </li>
+      
+      <li class="tag-detection">
+        <a href="//localhost:1313/tags/detection">detection</a>
+      </li>
+      
+    </ul>
+    
+  </div>
+
+  
+  
+
+  
+</div>
+
+  <h3 id="introduction">Introduction</h3>
+<p>Hello Everyone, it has been a minute since my last blog but
+<img src="back.webp" alt="image"></p>
+<p>I have been recently doing <a href="https://www.ongozacyberhub.org/" target="_blank">OCH</a> which is a good mastery(you should check them out), I have been specializing on the cloud security path since I am new to the field. In our track we were to do a project based on cloud specifically AWS, our mentor <a href="https://gh.linkedin.com/in/dennisawermensah" target="_blank">Dennis Mensa</a> gave us a good <a href="https://workshops.aws/" target="_blank">resource</a> to choose from since the AWS cloud security is wide.</p>
+<p>Upon going through the workshops I decided to go with <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/ea9c0361-001f-4194-963e-06b07c3e5d6b/en-US" target="_blank">Cryptominer Based Security Events</a></p>
+<p>This is a blog that will be covering how I did that.</p>
+<h3 id="introduction-1">Introduction</h3>
+<p>This is a good workshop that I used <a href="https://aws.amazon.com/cloudformation/" target="_blank">CloudFormation</a>. Amazon Web Services offers a solution called AWS CloudFormation that lets customers securely and automatically model and manage infrastructure resources.
+I created 5 EC2 instances using the template from CloudFormation which will mimic cryptomining activity.
+After that I implemented tools to use to respond to such events and learn how to find evidence of such an unathorized activity which will be covered below. All this can be done on the AWS free tier.</p>
+<h3 id="some-of-the-tools-to-be-used">Some of the Tools To Be Used</h3>
+<ul>
+<li>
+<p>Assisted Log Enabler
+An open source application called Assisted Log Enabler for AWS was created to relieve customers of the hassle of activating logging features during a security incident. An Amazon Simple Storage Service (Amazon S3) bucket is created by Assisted Log Enabler for AWS, which also checks the services to determine if logging is enabled and, if not, activates it.</p>
+</li>
+<li>
+<p>AWS Security Analytics Bootstrap
+Customers may conduct security investigations on AWS service logs thanks to the AWS Security Analytics Bootstrap, which offers an Amazon Athena analysis environment that is simple to maintain, quick to deploy, and ready to use.</p>
+</li>
+</ul>
+<p><strong>Note</strong>: The AWS also provides a very comprehensive Incident Response Playbooks for various Scenarios. You can find them <a href="https://github.com/aws-samples/aws-customer-playbook-framework/tree/main/docs" target="_blank">here</a></p>
+<h3 id="setting-up-the-lab-environment">Setting Up The Lab Environment</h3>
+<p>This section covers how I created the lab used for detection and analysis together with the tools needed.</p>
+<h3 id="using-cloudformation">Using CloudFormation</h3>
+<p>I used CloudFormation template to install the EC2 instances. AWS provided a <a href="https://static.us-east-1.prod.workshops.aws/public/c976405b-1a71-4e59-a4b6-8e97f9b56527/static/TDIRWorkshopStack-auto.yml" target="_blank">template</a> for that.</p>
+<p><strong>Note</strong> One does not need to enable GuardDuty on our account if not enabled. Amazon VPC Flow Logs, DNS logs, AWS CloudTrail event logs, and AWS CloudTrail management events are among the fundamental data sources that GuardDuty, a threat detection service, keeps an eye on. Additionally, GuardDuty only analyzes features related to its protection categories if you enable them individually.</p>
+<p>The script already has a section of enabling GuardDuty as shown below:
+<img src="image-2.png" alt="image"></p>
+<p>It is good to note that if an AWS Account has GuardDuty already set one needs to delete those lines as the template will fail.</p>
+<p>Now I went back to <a href="https://aws.amazon.com/console/" target="_blank">AWS Console</a> and searched for CloudFormation to upload our template. I created a stack and uploaded our template. I left all the settings as default.
+<img src="image.png" alt="image"></p>
+<p>When finished it should look something like the below image:
+<img src="image-1.png" alt="image"></p>
+<h3 id="using-athena">Using Athena</h3>
+<p>In the template that I used above, it also included <a href="https://aws.amazon.com/athena/" target="_blank">Athena</a> which is a serverless interactive query service that allows you to query data sets using standard SQL.
+To run Athena, I went back to AWS console and searched for Athena, As per the guide here is how it should look like:</p>
+<p><img src="image-3.png" alt="image"></p>
+<p>I tested a query to see if Athena was running correctly.</p>
+<p><code>SELECT * FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot; limit 10;</code></p>
+<p>Here is a snippet of the results:
+<img src="image-4.png" alt="image"></p>
+<p>This is a simple SQL query in which the SELECT statement is used to retrieve data from a specific table(irworkshopgluetablevpcflow) in a database(irworkshopgluedatabase). LIMIT 10 restricts the result set to the first 10 rows.</p>
+<h3 id="reviewing-logs">Reviewing Logs</h3>
+<p>When reviewing logs it is essential to have some fields of interest  which are created by the Security Analytics Bootstrap as shown below:</p>
+<p><img src="image-5.png" alt="image"></p>
+<p>Here are some events which can deemed as malicious.
+<img src="image-6.png" alt="image"></p>
+<p>We can also see some saved queries that came bundled with our template that we installed via cloudfront.
+<img src="image-7.png" alt="image"></p>
+<p>I created a query from the saved queries, in this case a query to obtain a User Activity Summary, filtering only on high volume read-only GET/LIST/DESCRIBE calls. This was obtained from one of the saved queries <code>CloudTrailExampleQueries</code>. I edited the date and account set to my account ID</p>
+<p><img src="image-9.png" alt="image"></p>
+<p>Results:
+<img src="image-10.png" alt="image"></p>
+<p>These queries are important since I used them in Detection</p>
+<h3 id="simulation">Simulation</h3>
+<p>Here is where I simulated the creation of cryptomining resources in which this unauthorized use is commonly performed using the creation of stacks with CloudFormation.</p>
+<p><img src="fun.gif#center" alt="image"></p>
+<p>AWS Provided a <a href="https://static.us-east-1.prod.workshops.aws/public/c976405b-1a71-4e59-a4b6-8e97f9b56527/static/start_cryptomining_simulation.sh" target="_blank">bash script</a> which also made use of CloudFormation for simulation.</p>
+<p>I launched AWS Cloudshell.
+<img src="image-11.png" alt="image"> and in the actions tab I clicked on upload and uploaded the file
+<img src="image-12.png" alt="image">
+After that I made the script executable and I ran it.
+<code>chmod +x start_cryptomining_simulation.sh ./start_cryptomining_simulation.sh</code>
+<img src="image-13.png" alt="image"></p>
+<p>Now the basic functionality of the script automates the creation of AWS resources, including EC2 instances and a CloudFormation stack, in that each of the instances send DNS queries to known cryptomining domains to simulate cryptomining activity. It also creates 2 txt files as seen in the 2 <code>echo</code> commands after <code>echo &quot;Creating Resources for Simulation...&quot;</code>
+<img src="image-15.png" alt="image"></p>
+<p>The first one takes a large base64 code and puts it to userdata.txt. This code does the dig command to some of the known crypto mining sites <img src="image-14.png" alt="image">
+You can find the decoded version <a href="https://gchq.github.io/CyberChef/#recipe=From_Base64%28%27A-Za-z0-9%2B/%3D%27,true,false%29&amp;input=Ikl5RXZZbWx1TDJKaGMyZ2dMWGdLYld0a2FYSWdMWEFnTDNWemNpOWpjbmx3ZEc5cmFYUUtkRzkxWTJnZ0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwamFHMXZaQ0EzTlRBZ0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lqSVM5aWFXNHZZbUZ6YUNJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNKa2FXY2daRzl1WVhSbExuWXlMbmh0Y21sbkxtTnZiU0lnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0prYVdjZ2MzbHpkR1Z0ZEdWdUxtOXlaeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0prYVdjZ2VHMXlMbkJ2YjJ3dWJXbHVaWEpuWVhSbExtTnZiV0ZqSWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NtVmphRzhnSW1ScFp5QndiMjlzTG0xcGJtVnlaMkYwWlM1amIyMGlJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLWldOb2J5QWlaR2xuSUdSdlkydGxjblZ3WkdGMFpTNWhibTl1Wkc1ekxtNWxkQ0lnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0prYVdjZ2NuTndZMkV0Ym05eWRHaGhiWEIwYjI1emFHbHlaUzV2Y21jdWRXc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLWldOb2J5QWlaR2xuSUhodGNuQnZiMnd1WlhVaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0taV05vYnlBaVpHbG5JR055ZVhCMGIyWnZiR3h2ZHk1amIyMGlJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLWldOb2J5QWlaR2xuSUhodGNpMTFjMkV1WkhkaGNtWndiMjlzTG1OdmJTSWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSmthV2NnZUcxeUxXVjFMbVIzWVhKbWNHOXZiQzVqYjIwaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0taV05vYnlBaVpHbG5JSGh0Y2kxbGRURXVibUZ1YjNCdmIyd3ViM0puSWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NtVmphRzhnSW1OMWNtd2dMWE1nYUhSMGNEb3ZMM0J2YjJ3dWJXbHVaWEpuWVhSbExtTnZiUzlrYTJwa2FtdHFaR3h6WVdwa2EyeHFZV3h6YzJ0aGFtUnJjMkZyYW1ScmMyRnFhMnhzWVd4clpHcHpZV3hyYW1SellXeHJhbVJzYTJGemFpQWdQaUF2WkdWMkwyNTFiR3dnSmlJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNKamRYSnNJQzF6SUdoMGRIQTZMeTk0YlhJdWNHOXZiQzV0YVc1bGNtZGhkR1V1WTI5dEwyUm9aR2hxYTJoa2FtdG9aR3ByYUdGcWEyaGthbk5yWVdob2FtdG9hbXRoYUdSemFtdGhhMnBoYzJSb2EycGhhR1JxYXlBZ1BpQXZaR1YyTDI1MWJHd2dKaUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0ptYjNJZ2FTQnBiaUI3TVM0dU1UQjlPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0prYnlJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJEWjNCTllqTktiR0pUUW5CalNFNHhZbE5DYTJJeWVIWmphVUo2WVZoUloxbFhNV3hrUXk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCM1oxa3lPWFZqTWxacVpFZFdNR1JZU1dkWlYxSndZMGRzZWxreWJIVmFlVUpzWWtkc01DNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5Qk1hVUpYV2xoT01HRlhTakZpU0ZaMFNVZEdha2xJU25Cak0xWjZTVWRTZG1KSE9YbE1hUzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJDU21KcFFteGtVMEp3WWxoQ2JHTnRVbkJhV0ZGbllsZHJjMGxIYkd0SlNFNXFXbGQ0YkM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCamJXeDZZMWhXYkVsSE9YbFpNbXQxU1VVMU1XSkhlR2hpVTBJeFpFTkNjMkZYU214amJTNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QTRaMk5JVm5sa1dFMTFTVVpDYkdKSGVHeGlibEpzWXpOR01WcFRRbWhrUTBKdFkyMXNkUzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJhTW14ellrZEZaMkpYVmpCa1dFMXpTVWRHYWtsSVZuTmtTRXB3V1RKV2VrbEhWbmxaV0M1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCUmRVbEZXakZqTWs1c1NVZE9NV051VGpGamVVSjBZako0YzJGWVRXZGpiV3g2WkZoTlp5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmtXRkZuWkZkNE1HTnRiR3BoVjFaNlRHbENUMWxYTUdkaVYwWjZZekpGWjJGdVZucGtSeTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUE0YzBsSVZuTmtTRXB3V1RKc2JHTjVRbWhrVjA0d1lqTkpaMkpYYTJka1dGRnpTVWRTY0M1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCWk0xSXhZbE5DYzJJeVNuWmpibEp3WTNsQ2RXUlhlSE5aVXpSblZHNVdjMkpIUldkak1pNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QnNNRWxIUm5SYVdGRm5XbTFXYzJGWVRXZGliVGwxU1Vkc2QyTXpWblJKU0Zwc1l6TlNjQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJaYmxaelpGY3daMk50YUhaaWJVNHhZM2swWjFSSE9YbGFWekJuWVZoQ2VtUlhNR2RhUnk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlBNWMySXpTV2RqTW13d1NVZEdkRnBZVVhOSlIwNTJZbTVPYkZrelVteGtTRlo1U1VkR2F5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmhXRUp3WXpKT2NHSnRZMmRhVjNod1pFTTBaMU5YTkdkYWJVWXhXVEpzYVdSWVRXZGhWeTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJSWjFwWGVIQmtRMEpvWkVOQ2RGbFlhSEJpV0ZaNlRHbENRbUpIYkhoa1YwWjBTVWRTYUM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCalIyeHBaRmhOWjJSWVVXZGlWMFl4WTIxc2VrbEhOV3haZVVKdFdWaFdhbUZYU2pGamVTNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QTBaMVZJU25aaFZ6Um5XVmhXYW1SSE9YbEpSM2h3V1cxV2VXSjVRblZhVjAxbldWaFdiaTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJrVjFWbll6SkdibUZZVWpCaFdFMW5XVEk1ZFZwSGJIUmFWelV3WkZjd2RVbEdXbXhqTXk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCU2NGbHVWbk5rVnpCbldXMXNhVnBYTld0a1Z6Qm5ZakpTY0dKNVFuaGtWMFowVEVOQ2FDNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmtRMEpxWWpJMWJtUlhWV2RpYmxaellrZEZaMlJ0YkRKYVdFcDVXVk5DY0dKcE5HZFRWeTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUEwWjJSWGVEQmpiV3hxWVZkV2VrbElVakZqYmtKd1kzbENhR1JEUW0xWlYwNXdZa2RzZWk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCaFdFMW5Xa2RzYW1SSVZuUk1hVUpHWkVkc2FHSlRRblZoV0U1d1NVZEdkV1JIVlhOSlJ5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QlNjRmt6VWpGaVUwSnNaRU5DYjFwWE5XdGpiVlo1WVZoUloySnRWbXBNUTBKNllqSlNhQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJpUjFaNlNVZHNhMGxIVm5saU0wMTFRMmR3VVdGSFJucGFWM2h6WkZoTloxcHRWakZhTWk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCc2FHUkRRblZrVnpWcVNVaE9iRnBEUW5wa1dFNXFZVmhDY0dSRFFtMVpXRlpxWVZkS01TNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmplVFJuVVZkV2RWcFhSblZKU0ZKd1ltMU9jRnBJVm5Wa1EwSjNZak5LTUdSSGJEQmlNeTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJKWjJKdGJIcGlRM2RuWkZoUloxa3pWbmxqTTFaNlNVZGFiR0pIYkhwSlNGcDJZa2hXTUM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCalIwWXdTVWhhY0dSSFJteE1hVUpPWWpOS2FXRlRRblZhVjAxbllrZFdka2xJUWpGaVNDNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmFjR0p0Um5sTVEwSm9XVEpPTVdKWVRtaGlhVUowV1ZoV2VXRllUV2RpYlZacVRFTkNhaTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJpTWpGMFlqSlNka2xITVdoa1dFcHdZM2swWjFSdFJuUkpSMDUyWWxjeGRscEhPR2RhVnk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCa2JHUkRRbXhpYld4MFNVZEdNRWxIUm5OaFdFWXhXVmN3ZFVsR1RqRmpNMEpzWW0xU2NDNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmpNMDVzU1VkV2JscFlUakJaV0UxbllsZEdlbU15UldkaFYxRm5ZMjFzZW1SWVRXZGpSeTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJXYzJKSFZuVmtSMVo2WTFoV2JFbElRblpqYmxJd1lWaFNkbU5wUW5WYVYwMW5ZbTFXYWk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCSlJ6VnNZMWhXYkV4cFFrUmpiVVo2U1VjMWJGbDVRbnBhVnpCbldWaEthbVJUTkdkVWJpNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QldjMkpIUldkaldGWndZM2xDZWxsWVFuQmFWelJuWVZjMFoySkhSbXBrV0UxbllrZEdhaTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJoVnpWd1dWTkNNV0pJVW5saFYwNXNZM2xDZEZsWVVqQmhXRTFuV2xoUloyTklWbmxrV0M1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCTmRVbEZOVEZpYlUxbldtMVdlV0pYVm5Wa1NGWjBTVWMxYkdOWVZteEpSMnhyU1VjMU1TNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmliVTFuV1cxNGFHSnRVbkJrUTBKMFdWaG9jR0pZVm5wTWFVSkZaRmRzZWtsSFZqRkpTQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJPZG1KSGVIQlpNbXd3WkZkU2NHSnBRblZrVjNoeldWTjNaMWxYVFdkaVYwWXdaRWRzZWk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCSlIwWXhXak5XYkV4cFFrNVpXRlo1WVZoTloyTllWbkJqZVVKcVpGaEtlbVJZVFdkaFdDNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QkNlbVJYTUhOSlNFWXhZVmhOWjFwdVNuQmliV1J3WWtkNGFFbElUbXhpVXpSblZGYzVlUzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJaYld0bllsZEdjMXBZVGpGWlYxSm9TVWhPYUdOSGJHeGlhVUo2V2xkUloySlhWakJrV0M1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCTloxa3lPWFZrYlVaellrZHNla3hEUW5waFdGRm5XVmN4YkdSRFFteGtWMng2WWxjNWF5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QkpSMFl4V2pOV2JFbElRbXhpUjNoc1ltNVNiR016UmpGYVV6Um5WRmM1ZVZsdGEyZGliUzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJzYVdGRFFteGpiVVl3VEVOQ2QySXpUakZhV0Vwc1NVaE9jR1JEUW1oaVYxWXdTVWRHYWk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCWk0xWjBZekpHZFVsSE5XeFplWGRuWWxkR2MxcFlUakZaVjFKb1NVZEZaMkpIVm5aTVp5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QnZTMUpIT1hWYVYwMW5XbGhWWjJOSVNteGtSMnd4WWxOQ2RscEhiSFpNYVVKQ1dsYzFiQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJaVnpSblpFaEtjR016VW5CaldGWnNTVWhHTVZsWE1HZGtiVlp6U1VjNWVWa3lhMmRaVnk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCNGNHTllWbWhpVTNkblltMVdha2xJVG1wYVYzaHNZMjFzZW1OWVZteEpSelV4WW0xTlp5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmpNMVo2V1RKc2QyRllVWFZKUlZZd1lWZEdkRWxIVm5OaFdGRm5ZekpXZEV4RFFqSmhXQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJhYkdOdVNtaEpSelZzV1hsQ2JXTnRiSFZhTW14ellrZEZaMlJ0YkRCWlYxVnpTVWRXTVM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCaFdFNTBZakpSWjJGWFVXZGtTRlo1WTBkc2VreHBRa3BpYmxKc1dqSldlVWxJUmpGaFdDNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5Qk5aMXBZU21oa1EwSnNXakpXTUVsSFJubFpNMVZuWkVkc2RWa3liR3RrVnpVd1NVaENiQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJpUjNoc1ltNVNiR016UmpGYVV6Um5VVE5XZVZsWFNuQmtTRlo1U1VoR01WbFhNR2RpYmk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCV2MySkhSWE5KUjNneFdUTlNNV041UWpKYVYzZG5aRzA1YzJSWVVuZFpXRkZuV2xka2JDNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QmtRM2RuV2tkR2QyRlhTakZqZVVKc1pFTkNkV1JYTldwTWFVSlBaRmMxYWtsSVJqRmhXQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJOWjJKSGJHbGFXRXAyU1VkR2MyRllSakZaVnpCelNVZE9kbUp0VW5CaVYxWjFaRWhXZEM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlCSlIzQXhZek5TZGtsSVJqRmhXRTF6U1VkNGFGa3liSFZoVjBWblltMVdlR1JYVlhWSlJpNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QkNlV0l5YkhWSlIxSm9ZMGRzYVdSWVRXZGFWM2h3WkVOQ2FHUkRRbTlhVnpWclkyMVdlUzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNJZ0lHUnBaeUJoV0ZGbllsZEdOR0ZYTVRGamVUUm5WVEpXYTBsSVRteGlXRUpzWTJsQ2RXUlhOV3BKUnk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQXBsWTJodklDSWdJR1JwWnlBeGFHTXpUbWhNUTBKc1dqSldNRWxJUW14aVIzaHNZbTVTYkdNelJqRmFVMEpzWWtkc01DNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFwbFkyaHZJQ0lnSUdScFp5QkpTRTVvV2pKc01HUkhiSHBKU0U1c1drTTBaeTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBcGxZMmh2SUNKa2IyNWxJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ205dVpWOWpZV3hzUFNRb0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUNrS2RHOTFZMmdnTDNaaGNpOXpjRzl2YkM5amNtOXVMM0p2YjNRS0wzVnpjaTlpYVc0dlkzSnZiblJoWWlBdmRtRnlMM053YjI5c0wyTnliMjR2Y205dmRBcGxZMmh2SUNJcUx6RTFJQ29nS2lBcUlDb2dMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFDSWdQajRnTDNaaGNpOXpjRzl2YkM5amNtOXVMM0p2YjNRSyIgDQo&amp;ieol=CRLF" target="_blank">here</a></p>
+<p>The 2nd script, you can find the decoded version <a href="https://gchq.github.io/CyberChef/#recipe=From_Base64%28%27A-Za-z0-9%2B/%3D%27,true,false%29&amp;input=ZWNobyAiUVZkVFZHVnRjR3hoZEdWR2IzSnRZWFJXWlhKemFXOXVPaUFuTWpBeE1DMHdPUzB3T1NjS1RXVjBZV1JoZEdFNkNpQWdRVmRUT2pwRGJHOTFaRVp2Y20xaGRHbHZiam82U1c1MFpYSm1ZV05sT2dvZ0lDQWdVR0Z5WVcxbGRHVnlSM0p2ZFhCek9nb2dJQ0FnSUNBdElFeGhZbVZzT2dvZ0lDQWdJQ0FnSUNBZ1pHVm1ZWFZzZERvZ1RtVjBkMjl5YTJsdVp5QkRiMjVtYVdkMWNtRjBhVzl1Q2lBZ0lDQWdJQ0FnVUdGeVlXMWxkR1Z5Y3pvS0lDQWdJQ0FnSUNBdElGWndZMGxrQ2lBZ0lDQWdJQ0FnTFNCVGRXSnVaWFJKWkhNS0lDQWdJQ0FnSUNBS1VHRnlZVzFsZEdWeWN6b0tJQ0JXY0dOSlpEb0tJQ0FnSUVSbGMyTnlhWEIwYVc5dU9pQlVhR1VnVmxCRElIZG9aWEpsSUhSb2FYTWdjM1JoWTJzZ2QybHNiQ0JpWlNCa1pYQnNiM2xsWkFvZ0lDQWdWSGx3WlRvZ1FWZFRPanBGUXpJNk9sWlFRem82U1dRS0NpQWdVM1ZpYm1WMFNXUnpPZ29nSUNBZ1JHVnpZM0pwY0hScGIyNDZJRlJvWlNCemRXSnVaWFFnZDJobGNtVWdkR2hsSUdsdWMzUmhibU5sY3lCM2FXeHNJR0psSUdSbGNHeHZlV1ZrQ2lBZ0lDQlVlWEJsT2lCTWFYTjBQRUZYVXpvNlJVTXlPanBUZFdKdVpYUTZPa2xrUGdvS1RXRndjR2x1WjNNNkNpQWdTVzFoWjJWTllYQTZDaUFnSUNCMWN5MWxZWE4wTFRFNkNpQWdJQ0FnSUVGTlNUb2dZVzFwTFhoNGVIaDRlSGg0ZUhoNGVIaDRlSGg0SUNBakl5Qk9MaUJXYVhKbmFXNXBZUW9nSUNBZ1lYQXRjMjkxZEdobFlYTjBMVEk2Q2lBZ0lDQWdJRUZOU1RvZ1lXMXBMVEEwWmpjM1lXRTFPVGN3T1RNNU1UUTRJQ0FqSXlCVGVXUnVaWGtLSUNBZ0lHVjFMV05sYm5SeVlXd3RNVG9LSUNBZ0lDQWdRVTFKT2lCaGJXa3RNR0UyWkdNM05USTVZMlExTlRreE9EVWdJQ01qSUVaeVlXNXJablZ5ZEFvS0lDQkRZWEJoWTJsMGVVRnNiRzlqWVhScGIyNDZDaUFnSUNCemNHOTBPZ29nSUNBZ0lDQlBia1JsYldGdVpGQmpkRG9nSWpBaUNpQWdJQ0JpYjNSb09nb2dJQ0FnSUNCUGJrUmxiV0Z1WkZCamREb2dJalV3SWdvZ0lDQWdiMjVrWlcxaGJtUTZDaUFnSUNBZ0lFOXVSR1Z0WVc1a1VHTjBPaUFpTVRBd0lnb0tVbVZ6YjNWeVkyVnpPZ29nSUVGeloxVndaR0YwWlhJNkNpQWdJQ0JFWlhCbGJtUnpUMjQ2Q2lBZ0lDQXRJRUZ6WndvZ0lDQWdWSGx3WlRvZ1EzVnpkRzl0T2pwQmMyZFZjR1JoZEdWeUNpQWdJQ0JRY205d1pYSjBhV1Z6T2dvZ0lDQWdJQ0JUWlhKMmFXTmxWRzlyWlc0NklDRkhaWFJCZEhRZ1FYTm5WWEJrWVhSbGNreGhiV0prWVM1QmNtNEtJQ0FnSUNBZ1FYTm5UbUZ0WlRvZ0lWSmxaaUJCYzJjS0lDQWdJQ0FnUkdWemFYSmxaRU5oY0dGamFYUjVPaUF6Q2dvZ0lFRnpaMVZ3WkdGMFpYSk1ZVzFpWkdFNkNpQWdJQ0JVZVhCbE9pQkJWMU02T2t4aGJXSmtZVG82Um5WdVkzUnBiMjRLSUNBZ0lGQnliM0JsY25ScFpYTTZDaUFnSUNBZ0lFTnZaR1U2Q2lBZ0lDQWdJQ0FnSXlCTVlXMWlaR0VnYzI5MWNtTmxJR2x6SUdsdUlITnlZeTlzWVcxaVpHRnpMMkZ6WnkxMWNHUmhkR1Z5TG5CNUNpQWdJQ0FnSUNBZ1dtbHdSbWxzWlRvZ2ZBb2dJQ0FnSUNBZ0lDQWdJeUV2ZFhOeUwySnBiaTlsYm5ZZ2NIbDBhRzl1TXdvZ0lDQWdJQ0FnSUNBZ2FXMXdiM0owSUdwemIyNEtJQ0FnSUNBZ0lDQWdJR2x0Y0c5eWRDQmliM1J2TXdvZ0lDQWdJQ0FnSUNBZ2FXMXdiM0owSUhWeWJHeHBZak1LSUNBZ0lDQWdJQ0FnSUdoMGRIQTlkWEpzYkdsaU15NVFiMjlzVFdGdVlXZGxjaWdwQ2lBZ0lDQWdJQ0FnSUNCaGMyYzlZbTkwYnpNdVkyeHBaVzUwS0NKaGRYUnZjMk5oYkdsdVp5SXBDaUFnSUNBZ0lDQWdJQ0JUVlVORFJWTlRQU0pUVlVORFJWTlRJZ29nSUNBZ0lDQWdJQ0FnUmtGSlRFVkVQU0pHUVVsTVJVUWlDaUFnSUNBZ0lDQWdJQ0JrWldZZ2MyVnVaQ2hsZG1WdWRDeGpiMjUwWlhoMExITjBZWFIxY3l4a1lYUmhQWHQ5TEhKbFlYTnZiajFPYjI1bEtUb0tJQ0FnSUNBZ0lDQWdJQ0J5WlhOd2IyNXpaVlZ5YkQxbGRtVnVkRnNpVW1WemNHOXVjMlZWVWt3aVhRb2dJQ0FnSUNBZ0lDQWdJSEpsYzNCdmJuTmxRbTlrZVQxN0lsTjBZWFIxY3lJNmMzUmhkSFZ6TENKUWFIbHphV05oYkZKbGMyOTFjbU5sU1dRaU9tTnZiblJsZUhRdWJHOW5YM04wY21WaGJWOXVZVzFsTENKVGRHRmphMGxrSWpwbGRtVnVkRnNpVTNSaFkydEpaQ0pkTENKU1pYRjFaWE4wU1dRaU9tVjJaVzUwV3lKU1pYRjFaWE4wU1dRaVhTd2lURzluYVdOaGJGSmxjMjkxY21ObFNXUWlPbVYyWlc1MFd5Sk1iMmRwWTJGc1VtVnpiM1Z5WTJWSlpDSmRMQ0pTWldGemIyNGlPbkpsWVhOdmJpQnZjaUFpVTJWbElIUm9aU0JrWlhSaGFXeHpJR2x1SUVOc2IzVmtWMkYwWTJnZ1RHOW5JRk4wY21WaGJUb2dlMzBpTG1admNtMWhkQ2hqYjI1MFpYaDBMbXh2WjE5emRISmxZVzFmYm1GdFpTa3NmUW9nSUNBZ0lDQWdJQ0FnSUdsbUlHUmhkR0U2Q2lBZ0lDQWdJQ0FnSUNBZ0lISmxjM0J2Ym5ObFFtOWtlVnNpUkdGMFlTSmRQV1JoZEdFS0lDQWdJQ0FnSUNBZ0lDQnFjMjl1WDNKbGMzQnZibk5sUW05a2VUMXFjMjl1TG1SMWJYQnpLSEpsYzNCdmJuTmxRbTlrZVNrS0lDQWdJQ0FnSUNBZ0lDQndjbWx1ZENnaVBUMGdVa1ZUVUU5T1UwVWdQVDBpS1FvZ0lDQWdJQ0FnSUNBZ0lIQnlhVzUwS0dwemIyNWZjbVZ6Y0c5dWMyVkNiMlI1S1FvZ0lDQWdJQ0FnSUNBZ0lHaGxZV1JsY25NOWV5SmpiMjUwWlc1MExYUjVjR1VpT2lJaUxDSmpiMjUwWlc1MExXeGxibWQwYUNJNmMzUnlLR3hsYmlocWMyOXVYM0psYzNCdmJuTmxRbTlrZVNrcGZRb2dJQ0FnSUNBZ0lDQWdJSFJ5ZVRvS0lDQWdJQ0FnSUNBZ0lDQWdjbVZ6Y0c5dWMyVTlhSFIwY0M1eVpYRjFaWE4wS0NKUVZWUWlMSEpsYzNCdmJuTmxWWEpzTEdobFlXUmxjbk05YUdWaFpHVnljeXhpYjJSNVBXcHpiMjVmY21WemNHOXVjMlZDYjJSNUtRb2dJQ0FnSUNBZ0lDQWdJQ0J3Y21sdWRDZ2lVM1JoZEhWeklHTnZaR1U2SWl4eVpYTndiMjV6WlM1emRHRjBkWE1wQ2lBZ0lDQWdJQ0FnSUNBZ1pYaGpaWEIwSUVWNFkyVndkR2x2YmlCaGN5QmxPZ29nSUNBZ0lDQWdJQ0FnSUNCd2NtbHVkQ2dpYzJWdVpDZ3VMaWtnWm1GcGJHVmtJR1Y0WldOMWRHbHVaeUJvZEhSd0xuSmxjWFZsYzNRb0xpNHBPaUlzWlNrS0lDQWdJQ0FnSUNBZ0lHUmxaaUJzWVcxaVpHRmZhR0Z1Wkd4bGNpaGxkbVZ1ZEN4amIyNTBaWGgwS1RvS0lDQWdJQ0FnSUNBZ0lDQndjbWx1ZENnaVBUMGdSVlpGVGxRZ1BUMGlLUW9nSUNBZ0lDQWdJQ0FnSUhCeWFXNTBLR3B6YjI0dVpIVnRjSE1vWlhabGJuUXBLUW9nSUNBZ0lDQWdJQ0FnSUhSeWVUb0tJQ0FnSUNBZ0lDQWdJQ0FnZEhKNU9nb2dJQ0FnSUNBZ0lDQWdJQ0FnWVhOblgyNWhiV1U5WlhabGJuUmJJbEpsYzI5MWNtTmxVSEp2Y0dWeWRHbGxjeUpkV3lKQmMyZE9ZVzFsSWwwS0lDQWdJQ0FnSUNBZ0lDQWdJR1JsYzJseVpXUmZZMkZ3WVdOcGRIazlhVzUwS0dWMlpXNTBXeUpTWlhOdmRYSmpaVkJ5YjNCbGNuUnBaWE1pWFZzaVJHVnphWEpsWkVOaGNHRmphWFI1SWwwcENpQWdJQ0FnSUNBZ0lDQWdJR1Y0WTJWd2RDQkxaWGxGY25KdmNpQmhjeUJsT2dvZ0lDQWdJQ0FnSUNBZ0lDQWdjbUZwYzJVZ1JYaGpaWEIwYVc5dUtDSk5hWE56YVc1bklISmxjWFZwY21Wa0lIQnliM0JsY25SNU9pQjdaWDBpS1FvZ0lDQWdJQ0FnSUNBZ0lDQnBaaUJsZG1WdWRGc2lVbVZ4ZFdWemRGUjVjR1VpWFdsdUtDSkRjbVZoZEdVaUxDSlZjR1JoZEdVaUtUb0tJQ0FnSUNBZ0lDQWdJQ0FnSUdGelp5NXpaWFJmWkdWemFYSmxaRjlqWVhCaFkybDBlU2hCZFhSdlUyTmhiR2x1WjBkeWIzVndUbUZ0WlQxaGMyZGZibUZ0WlN4RVpYTnBjbVZrUTJGd1lXTnBkSGs5WkdWemFYSmxaRjlqWVhCaFkybDBlU2tLSUNBZ0lDQWdJQ0FnSUNBZ0lIQnlhVzUwS0dZaVUyVjBkR2x1WnlCa1pYTnBjbVZrSUdOaGNHRmphWFI1SUdadmNpQW5lMkZ6WjE5dVlXMWxmU2NnZEc4Z2UyUmxjMmx5WldSZlkyRndZV05wZEhsOUlpa0tJQ0FnSUNBZ0lDQWdJQ0JsZUdObGNIUWdSWGhqWlhCMGFXOXVJR0Z6SUdVNkNpQWdJQ0FnSUNBZ0lDQWdJSE5sYm1Rb1pYWmxiblFzWTI5dWRHVjRkQ3hHUVVsTVJVUXNjbVZoYzI5dVBXWWlSWEp5YjNJNklIdGxmU0lwQ2lBZ0lDQWdJQ0FnSUNBZ0lISmxkSFZ5YmlCR1lXeHpaUW9nSUNBZ0lDQWdJQ0FnSUhObGJtUW9aWFpsYm5Rc1kyOXVkR1Y0ZEN4VFZVTkRSVk5UTEhzaVJHVnphWEpsWkVOaGNHRmphWFI1SWpwa1pYTnBjbVZrWDJOaGNHRmphWFI1ZlN3cENpQWdJQ0FnSUNBZ0lDQWpJRU55WldGMFpXUWdZbmtnY0hsdGFXNXBabWxsY2lBb2FIUjBjSE02THk5bmFYUm9kV0l1WTI5dEwyeHBablJ2Wm1ZdmNIbHRhVzVwWm1sbGNpa0tJQ0FnSUNBZ0lDQWdJQW9nSUNBZ0lDQklZVzVrYkdWeU9pQWlhVzVrWlhndWJHRnRZbVJoWDJoaGJtUnNaWElpQ2lBZ0lDQWdJRkoxYm5ScGJXVTZJSEI1ZEdodmJqTXVPUW9nSUNBZ0lDQlVhVzFsYjNWME9pQXhNQW9nSUNBZ0lDQlNiMnhsT2lBaFIyVjBRWFIwSUV4aGJXSmtZVVY0WldOMWRHbHZibEp2YkdVdVFYSnVDZ29nSUV4aGJXSmtZVVY0WldOMWRHbHZibEp2YkdVNkNpQWdJQ0JVZVhCbE9pQkJWMU02T2tsQlRUbzZVbTlzWlFvZ0lDQWdVSEp2Y0dWeWRHbGxjem9LSUNBZ0lDQWdRWE56ZFcxbFVtOXNaVkJ2YkdsamVVUnZZM1Z0Wlc1ME9nb2dJQ0FnSUNBZ0lGWmxjbk5wYjI0NklDY3lNREV5TFRFd0xURTNKd29nSUNBZ0lDQWdJRk4wWVhSbGJXVnVkRG9LSUNBZ0lDQWdJQ0F0SUVWbVptVmpkRG9nUVd4c2IzY0tJQ0FnSUNBZ0lDQWdJRkJ5YVc1amFYQmhiRG9LSUNBZ0lDQWdJQ0FnSUNBZ1UyVnlkbWxqWlRvS0lDQWdJQ0FnSUNBZ0lDQWdMU0JzWVcxaVpHRXVZVzFoZW05dVlYZHpMbU52YlFvZ0lDQWdJQ0FnSUNBZ1FXTjBhVzl1T2dvZ0lDQWdJQ0FnSUNBZ0xTQnpkSE02UVhOemRXMWxVbTlzWlFvZ0lDQWdJQ0JRWVhSb09pQWlMeUlLSUNBZ0lDQWdUV0Z1WVdkbFpGQnZiR2xqZVVGeWJuTTZDaUFnSUNBZ0lDMGdZWEp1T21GM2N6cHBZVzA2T21GM2N6cHdiMnhwWTNrdmMyVnlkbWxqWlMxeWIyeGxMMEZYVTB4aGJXSmtZVUpoYzJsalJYaGxZM1YwYVc5dVVtOXNaUW9nSUNBZ0lDQlFiMnhwWTJsbGN6b0tJQ0FnSUNBZ0xTQlFiMnhwWTNsT1lXMWxPaUJKYm5OMFlXNWpaVVpwYkhSbGNnb2dJQ0FnSUNBZ0lGQnZiR2xqZVVSdlkzVnRaVzUwT2dvZ0lDQWdJQ0FnSUNBZ1ZtVnljMmx2YmpvZ0p6SXdNVEl0TVRBdE1UY25DaUFnSUNBZ0lDQWdJQ0JUZEdGMFpXMWxiblE2Q2lBZ0lDQWdJQ0FnSUNBdElFVm1abVZqZERvZ1FXeHNiM2NLSUNBZ0lDQWdJQ0FnSUNBZ1FXTjBhVzl1T2dvZ0lDQWdJQ0FnSUNBZ0lDQXRJR1ZqTWpwRVpYTmpjbWxpWlVsdWMzUmhibU5sVkhsd1pVOW1abVZ5YVc1bmN3b2dJQ0FnSUNBZ0lDQWdJQ0F0SUdWak1qcEVaWE5qY21saVpVbHVjM1JoYm1ObFZIbHdaWE1LSUNBZ0lDQWdJQ0FnSUNBZ0xTQmxZekk2UkdWelkzSnBZbVZUY0c5MFVISnBZMlZJYVhOMGIzSjVDaUFnSUNBZ0lDQWdJQ0FnSUMwZ1lYVjBiM05qWVd4cGJtYzZVMlYwUkdWemFYSmxaRU5oY0dGamFYUjVDaUFnSUNBZ0lDQWdJQ0FnSUZKbGMyOTFjbU5sT2lBaUtpSUtDaUFnU1c1emRHRnVZMlZTYjJ4bE9nb2dJQ0FnVkhsd1pUb2dRVmRUT2pwSlFVMDZPbEp2YkdVS0lDQWdJRkJ5YjNCbGNuUnBaWE02Q2lBZ0lDQWdJRUZ6YzNWdFpWSnZiR1ZRYjJ4cFkzbEViMk4xYldWdWREb0tJQ0FnSUNBZ0lDQldaWEp6YVc5dU9pQXlNREV5TFRFd0xURTNDaUFnSUNBZ0lDQWdVM1JoZEdWdFpXNTBPZ29nSUNBZ0lDQWdJQ0FnTFNCRlptWmxZM1E2SUVGc2JHOTNDaUFnSUNBZ0lDQWdJQ0FnSUZCeWFXNWphWEJoYkRvS0lDQWdJQ0FnSUNBZ0lDQWdJQ0JUWlhKMmFXTmxPZ29nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdMU0JsWXpJdVlXMWhlbTl1WVhkekxtTnZiUW9nSUNBZ0lDQWdJQ0FnSUNCQlkzUnBiMjQ2Q2lBZ0lDQWdJQ0FnSUNBZ0lDQWdMU0FuYzNSek9rRnpjM1Z0WlZKdmJHVW5DaUFnSUNBZ0lFMWhibUZuWldSUWIyeHBZM2xCY201ek9nb2dJQ0FnSUNBZ0lDMGdKMkZ5YmpwaGQzTTZhV0Z0T2pwaGQzTTZjRzlzYVdONUwwRnRZWHB2YmxOVFRVMWhibUZuWldSSmJuTjBZVzVqWlVOdmNtVW5DZ29nSUVsdWMzUmhibU5sVUhKdlptbHNaVG9LSUNBZ0lGUjVjR1U2SUVGWFV6bzZTVUZOT2pwSmJuTjBZVzVqWlZCeWIyWnBiR1VLSUNBZ0lGQnliM0JsY25ScFpYTTZDaUFnSUNBZ0lGSnZiR1Z6T2dvZ0lDQWdJQ0F0SUNGU1pXWWdTVzV6ZEdGdVkyVlNiMnhsQ2dvZ0lFeGhkVzVqYUZSbGJYQnNZWFJsVkRKT1lXNXZPZ29nSUNBZ1ZIbHdaVG9nUVZkVE9qcEZRekk2T2t4aGRXNWphRlJsYlhCc1lYUmxDaUFnSUNCUWNtOXdaWEowYVdWek9nb2dJQ0FnSUNCTVlYVnVZMmhVWlcxd2JHRjBaVVJoZEdFNkNpQWdJQ0FnSUNBZ1NXRnRTVzV6ZEdGdVkyVlFjbTltYVd4bE9nb2dJQ0FnSUNBZ0lDQWdRWEp1T2lBaFIyVjBRWFIwSUVsdWMzUmhibU5sVUhKdlptbHNaUzVCY200S0lDQWdJQ0FnSUNCSmJXRm5aVWxrT2lBaFJtbHVaRWx1VFdGd0lGc2dTVzFoWjJWTllYQXNJQ0ZTWldZZ0lrRlhVem82VW1WbmFXOXVJaXdnUVUxSklGMEtJQ0FnSUNBZ0lDQkpibk4wWVc1alpWUjVjR1U2SUhReUxtNWhibThLSUNBZ0lDQWdJQ0JWYzJWeVJHRjBZVG9LSUNBZ0lDQWdJQ0FnSUNkR2JqbzZRbUZ6WlRZMEp6b2dJVk4xWWlCOENpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNBaklTOWlhVzR2WW1GemFDQXRlQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdiV3RrYVhJZ0xYQWdMM1Z6Y2k5amNubHdkRzlyYVhRS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUhSdmRXTm9JQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHTm9iVzlrSURjMU1DQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lqSVM5aWFXNHZZbUZ6YUNJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpWkdsbklHUnZibUYwWlM1Mk1pNTRiWEpwWnk1amIyMGlJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0ltUnBaeUJ6ZVhOMFpXMTBaVzR1YjNKbklpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNKa2FXY2dlRzF5TG5CdmIyd3ViV2x1WlhKbllYUmxMbU52YldGaklpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNKa2FXY2djRzl2YkM1dGFXNWxjbWRoZEdVdVkyOXRJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSmthV2NnWkc5amEyVnlkWEJrWVhSbExtRnViMjVrYm5NdWJtVjBJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSmthV2NnY25Od1kyRXRibTl5ZEdoaGJYQjBiMjV6YUdseVpTNXZjbWN1ZFdzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSW1ScFp5QjRiWEp3YjI5c0xtVjFJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSmthV2NnWTNKNWNIUnZabTlzYkc5M0xtTnZiU0lnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlaR2xuSUhodGNpMTFjMkV1WkhkaGNtWndiMjlzTG1OdmJTSWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaVpHbG5JSGh0Y2kxbGRTNWtkMkZ5Wm5CdmIyd3VZMjl0SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0prYVdjZ2VHMXlMV1YxTVM1dVlXNXZjRzl2YkM1dmNtY2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0ltTjFjbXdnTFhNZ2FIUjBjRG92TDNCdmIyd3ViV2x1WlhKbllYUmxMbU52YlM5a2EycGthbXRxWkd4ellXcGthMnhxWVd4emMydGhhbVJyYzJGcmFtUnJjMkZxYTJ4c1lXeHJaR3B6WVd4cmFtUnpZV3hyYW1Sc2EyRnphaUFnUGlBdlpHVjJMMjUxYkd3Z0ppSWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaVkzVnliQ0F0Y3lCb2RIUndPaTh2ZUcxeUxuQnZiMnd1YldsdVpYSm5ZWFJsTG1OdmJTOWthR1JvYW10b1pHcHJhR1JxYTJoaGFtdG9aR3B6YTJGb2FHcHJhR3ByWVdoa2MycHJZV3RxWVhOa2FHdHFZV2hrYW1zZ0lENGdMMlJsZGk5dWRXeHNJQ1lpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJbVp2Y2lCcElHbHVJSHN4TGk0eE1IMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSmtieUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlJQ0JrYVdjZ1EyZHdUV0l6U214aVUwSndZMGhPTVdKVFFtdGlNbmgyWTJsQ2VtRllVV2RaVnpGc1pFTXVZV1p6WkdWdExtTnZiVHNpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaUFnWkdsbklIZG5XVEk1ZFdNeVZtcGtSMVl3WkZoSloxbFhVbkJqUjJ4NldUSnNkVnA1UW14aVIyd3dMbUZtYzJSbGJTNWpiMjA3SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lnSUdScFp5Qk1hVUpYV2xoT01HRlhTakZpU0ZaMFNVZEdha2xJU25Cak0xWjZTVWRTZG1KSE9YbE1hUzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpSUNCa2FXY2dRa3BpYVVKc1pGTkNjR0pZUW14amJWSndXbGhSWjJKWGEzTkpSMnhyU1VoT2FscFhlR3d1WVdaelpHVnRMbU52YlRzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSWlBZ1pHbG5JR050YkhwaldGWnNTVWM1ZVZreWEzVkpSVFV4WWtkNGFHSlRRakZrUTBKellWZEtiR050TG1GbWMyUmxiUzVqYjIwN0lpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNJZ0lHUnBaeUE0WjJOSVZubGtXRTExU1VaQ2JHSkhlR3hpYmxKc1l6TkdNVnBUUW1oa1EwSnRZMjFzZFM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaUlDQmthV2NnV2pKc2MySkhSV2RpVjFZd1pGaE5jMGxIUm1wSlNGWnpaRWhLY0ZreVZucEpSMVo1V1ZndVlXWnpaR1Z0TG1OdmJUc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0lpQWdaR2xuSUZGMVNVVmFNV015VG14SlIwNHhZMjVPTVdONVFuUmlNbmh6WVZoTloyTnRiSHBrV0UxbkxtRm1jMlJsYlM1amIyMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSWdJR1JwWnlCa1dGRm5aRmQ0TUdOdGJHcGhWMVo2VEdsQ1QxbFhNR2RpVjBaNll6SkZaMkZ1Vm5wa1J5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlJQ0JrYVdjZ09ITkpTRlp6WkVoS2NGa3liR3hqZVVKb1pGZE9NR0l6U1dkaVYydG5aRmhSYzBsSFVuQXVZV1p6WkdWdExtTnZiVHNpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaUFnWkdsbklGa3pVakZpVTBKellqSktkbU51VW5CamVVSjFaRmQ0YzFsVE5HZFVibFp6WWtkRloyTXlMbUZtYzJSbGJTNWpiMjA3SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lnSUdScFp5QnNNRWxIUm5SYVdGRm5XbTFXYzJGWVRXZGliVGwxU1Vkc2QyTXpWblJKU0Zwc1l6TlNjQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpSUNCa2FXY2dXVzVXYzJSWE1HZGpiV2gyWW0xT01XTjVOR2RVUnpsNVdsY3daMkZZUW5wa1Z6Qm5Xa2N1WVdaelpHVnRMbU52YlRzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSWlBZ1pHbG5JRGx6WWpOSloyTXliREJKUjBaMFdsaFJjMGxIVG5aaWJrNXNXVE5TYkdSSVZubEpSMFpyTG1GbWMyUmxiUzVqYjIwN0lpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNJZ0lHUnBaeUJoV0VKd1l6Sk9jR0p0WTJkYVYzaHdaRU0wWjFOWE5HZGFiVVl4V1RKc2FXUllUV2RoVnk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaUlDQmthV2NnVVdkYVYzaHdaRU5DYUdSRFFuUlpXR2h3WWxoV2VreHBRa0ppUjJ4NFpGZEdkRWxIVW1ndVlXWnpaR1Z0TG1OdmJUc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0lpQWdaR2xuSUdOSGJHbGtXRTFuWkZoUloySlhSakZqYld4NlNVYzFiRmw1UW0xWldGWnFZVmRLTVdONUxtRm1jMlJsYlM1amIyMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSWdJR1JwWnlBMFoxVklTblpoVnpSbldWaFdhbVJIT1hsSlIzaHdXVzFXZVdKNVFuVmFWMDFuV1ZoV2JpNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlJQ0JrYVdjZ1pGZFZaMk15Um01aFdGSXdZVmhOWjFreU9YVmFSMngwV2xjMU1HUlhNSFZKUmxwc1l6TXVZV1p6WkdWdExtTnZiVHNpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaUFnWkdsbklGSndXVzVXYzJSWE1HZFpiV3hwV2xjMWEyUlhNR2RpTWxKd1lubENlR1JYUm5STVEwSm9MbUZtYzJSbGJTNWpiMjA3SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lnSUdScFp5QmtRMEpxWWpJMWJtUlhWV2RpYmxaellrZEZaMlJ0YkRKYVdFcDVXVk5DY0dKcE5HZFRWeTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpSUNCa2FXY2dOR2RrVjNnd1kyMXNhbUZYVm5wSlNGSXhZMjVDY0dONVFtaGtRMEp0V1ZkT2NHSkhiSG91WVdaelpHVnRMbU52YlRzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSWlBZ1pHbG5JR0ZZVFdkYVIyeHFaRWhXZEV4cFFrWmtSMnhvWWxOQ2RXRllUbkJKUjBaMVpFZFZjMGxITG1GbWMyUmxiUzVqYjIwN0lpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNJZ0lHUnBaeUJTY0ZrelVqRmlVMEpzWkVOQ2IxcFhOV3RqYlZaNVlWaFJaMkp0Vm1wTVEwSjZZakpTYUM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaUlDQmthV2NnWWtkV2VrbEhiR3RKUjFaNVlqTk5kVU5uY0ZGaFIwWjZXbGQ0YzJSWVRXZGFiVll4V2pJdVlXWnpaR1Z0TG1OdmJUc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0lpQWdaR2xuSUd4b1pFTkNkV1JYTldwSlNFNXNXa05DZW1SWVRtcGhXRUp3WkVOQ2JWbFlWbXBoVjBveExtRm1jMlJsYlM1amIyMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSWdJR1JwWnlCamVUUm5VVmRXZFZwWFJuVkpTRkp3WW0xT2NGcElWblZrUTBKM1lqTktNR1JIYkRCaU15NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlJQ0JrYVdjZ1NXZGliV3g2WWtOM1oyUllVV2RaTTFaNVl6Tldla2xIV214aVIyeDZTVWhhZG1KSVZqQXVZV1p6WkdWdExtTnZiVHNpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaUFnWkdsbklHTkhSakJKU0Zwd1pFZEdiRXhwUWs1aU0wcHBZVk5DZFZwWFRXZGlSMVoyU1VoQ01XSklMbUZtYzJSbGJTNWpiMjA3SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lnSUdScFp5QmFjR0p0Um5sTVEwSm9XVEpPTVdKWVRtaGlhVUowV1ZoV2VXRllUV2RpYlZacVRFTkNhaTVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpSUNCa2FXY2dZakl4ZEdJeVVuWkpSekZvWkZoS2NHTjVOR2RVYlVaMFNVZE9kbUpYTVhaYVJ6aG5XbGN1WVdaelpHVnRMbU52YlRzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSWlBZ1pHbG5JR1JzWkVOQ2JHSnRiSFJKUjBZd1NVZEdjMkZZUmpGWlZ6QjFTVVpPTVdNelFteGliVkp3TG1GbWMyUmxiUzVqYjIwN0lpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNJZ0lHUnBaeUJqTTA1c1NVZFdibHBZVGpCWldFMW5ZbGRHZW1NeVJXZGhWMUZuWTIxc2VtUllUV2RqUnk1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaUlDQmthV2NnVm5OaVIxWjFaRWRXZW1OWVZteEpTRUoyWTI1U01HRllVblpqYVVKMVdsZE5aMkp0Vm1vdVlXWnpaR1Z0TG1OdmJUc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0lpQWdaR2xuSUVsSE5XeGpXRlpzVEdsQ1JHTnRSbnBKUnpWc1dYbENlbHBYTUdkWldFcHFaRk0wWjFSdUxtRm1jMlJsYlM1amIyMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSWdJR1JwWnlCV2MySkhSV2RqV0Zad1kzbENlbGxZUW5CYVZ6Um5ZVmMwWjJKSFJtcGtXRTFuWWtkR2FpNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlJQ0JrYVdjZ1lWYzFjRmxUUWpGaVNGSjVZVmRPYkdONVFuUlpXRkl3WVZoTloxcFlVV2RqU0ZaNVpGZ3VZV1p6WkdWdExtTnZiVHNpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaUFnWkdsbklFMTFTVVUxTVdKdFRXZGFiVlo1WWxkV2RXUklWblJKUnpWc1kxaFdiRWxIYkd0SlJ6VXhMbUZtYzJSbGJTNWpiMjA3SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lnSUdScFp5QmliVTFuV1cxNGFHSnRVbkJrUTBKMFdWaG9jR0pZVm5wTWFVSkZaRmRzZWtsSFZqRkpTQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpSUNCa2FXY2dUblppUjNod1dUSnNNR1JYVW5CaWFVSjFaRmQ0YzFsVGQyZFpWMDFuWWxkR01HUkhiSG91WVdaelpHVnRMbU52YlRzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSWlBZ1pHbG5JRWxIUmpGYU0xWnNUR2xDVGxsWVZubGhXRTFuWTFoV2NHTjVRbXBrV0VwNlpGaE5aMkZZTG1GbWMyUmxiUzVqYjIwN0lpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNJZ0lHUnBaeUJDZW1SWE1ITkpTRVl4WVZoTloxcHVTbkJpYldSd1lrZDRhRWxJVG14aVV6Um5WRmM1ZVM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaUlDQmthV2NnV1cxcloySlhSbk5hV0U0eFdWZFNhRWxJVG1oalIyeHNZbWxDZWxwWFVXZGlWMVl3WkZndVlXWnpaR1Z0TG1OdmJUc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0lpQWdaR2xuSUUxbldUSTVkV1J0Um5OaVIyeDZURU5DZW1GWVVXZFpWekZzWkVOQ2JHUlhiSHBpVnpsckxtRm1jMlJsYlM1amIyMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSWdJR1JwWnlCSlIwWXhXak5XYkVsSVFteGlSM2hzWW01U2JHTXpSakZhVXpSblZGYzVlVmx0YTJkaWJTNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlJQ0JrYVdjZ2JHbGhRMEpzWTIxR01FeERRbmRpTTA0eFdsaEtiRWxJVG5Ca1EwSm9ZbGRXTUVsSFJtb3VZV1p6WkdWdExtTnZiVHNpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaUFnWkdsbklGa3pWblJqTWtaMVNVYzFiRmw1ZDJkaVYwWnpXbGhPTVZsWFVtaEpSMFZuWWtkV2RreG5MbUZtYzJSbGJTNWpiMjA3SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lnSUdScFp5QnZTMUpIT1hWYVYwMW5XbGhWWjJOSVNteGtSMnd4WWxOQ2RscEhiSFpNYVVKQ1dsYzFiQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpSUNCa2FXY2dXVmMwWjJSSVNuQmpNMUp3WTFoV2JFbElSakZaVnpCblpHMVdjMGxIT1hsWk1tdG5XVmN1WVdaelpHVnRMbU52YlRzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSWlBZ1pHbG5JSGh3WTFoV2FHSlRkMmRpYlZacVNVaE9hbHBYZUd4amJXeDZZMWhXYkVsSE5URmliVTFuTG1GbWMyUmxiUzVqYjIwN0lpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNJZ0lHUnBaeUJqTTFaNldUSnNkMkZZVVhWSlJWWXdZVmRHZEVsSFZuTmhXRkZuWXpKV2RFeERRakpoV0M1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaUlDQmthV2NnV214amJrcG9TVWMxYkZsNVFtMWpiV3gxV2pKc2MySkhSV2RrYld3d1dWZFZjMGxIVmpFdVlXWnpaR1Z0TG1OdmJUc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0lpQWdaR2xuSUdGWVRuUmlNbEZuWVZkUloyUklWbmxqUjJ4NlRHbENTbUp1VW14YU1sWjVTVWhHTVdGWUxtRm1jMlJsYlM1amIyMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSWdJR1JwWnlCTloxcFlTbWhrUTBKc1dqSldNRWxIUm5sWk0xVm5aRWRzZFZreWJHdGtWelV3U1VoQ2JDNWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlJQ0JrYVdjZ1lrZDRiR0p1VW14ak0wWXhXbE0wWjFFelZubFpWMHB3WkVoV2VVbElSakZaVnpCblltNHVZV1p6WkdWdExtTnZiVHNpSUQ0K0lDOTFjM0l2WTNKNWNIUnZhMmwwTDNCbGNuTnBjM1F1YzJnS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaUFnWkdsbklGWnpZa2RGYzBsSGVERlpNMUl4WTNsQ01scFhkMmRrYlRselpGaFNkMWxZVVdkYVYyUnNMbUZtYzJSbGJTNWpiMjA3SWlBK1BpQXZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0NpQWdJQ0FnSUNBZ0lDQWdJQ0FnSUNCbFkyaHZJQ0lnSUdScFp5QmtRM2RuV2tkR2QyRlhTakZqZVVKc1pFTkNkV1JYTldwTWFVSlBaRmMxYWtsSVJqRmhXQzVoWm5Oa1pXMHVZMjl0T3lJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ1pXTm9ieUFpSUNCa2FXY2dUV2RpUjJ4cFdsaEtka2xIUm5OaFdFWXhXVmN3YzBsSFRuWmliVkp3WWxkV2RXUklWblF1WVdaelpHVnRMbU52YlRzaUlENCtJQzkxYzNJdlkzSjVjSFJ2YTJsMEwzQmxjbk5wYzNRdWMyZ0tJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ0lHVmphRzhnSWlBZ1pHbG5JRWxIY0RGak0xSjJTVWhHTVdGWVRYTkpSM2hvV1RKc2RXRlhSV2RpYlZaNFpGZFZkVWxHTG1GbWMyUmxiUzVqYjIwN0lpQStQaUF2ZFhOeUwyTnllWEIwYjJ0cGRDOXdaWEp6YVhOMExuTm9DaUFnSUNBZ0lDQWdJQ0FnSUNBZ0lDQmxZMmh2SUNJZ0lHUnBaeUJDZVdJeWJIVkpSMUpvWTBkc2FXUllUV2RhVjNod1pFTkNhR1JEUW05YVZ6VnJZMjFXZVM1aFpuTmtaVzB1WTI5dE95SWdQajRnTDNWemNpOWpjbmx3ZEc5cmFYUXZjR1Z5YzJsemRDNXphQW9nSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdaV05vYnlBaUlDQmthV2NnWVZoUloySlhSalJoVnpFeFkzazBaMVV5Vm10SlNFNXNZbGhDYkdOcFFuVmtWelZxU1VjdVlXWnpaR1Z0TG1OdmJUc2lJRDQrSUM5MWMzSXZZM0o1Y0hSdmEybDBMM0JsY25OcGMzUXVjMmdLSUNBZ0lDQWdJQ0FnSUNBZ0lDQWdJR1ZqYUc4Z0lpQWdaR2xuSURGb1l6Tk9hRXhEUW14YU1sWXdTVWhDYkdKSGVHeGlibEpzWXpOR01WcFRRbXhpUjJ3d0xtRm1jMlJsYlM1amIyMDdJaUErUGlBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vQ2lBZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0JsWTJodklDSWdJR1JwWnlCSlNFNW9XakpzTUdSSGJIcEpTRTVzV2tNMFp5NWhabk5rWlcwdVkyOXRPeUlnUGo0Z0wzVnpjaTlqY25sd2RHOXJhWFF2Y0dWeWMybHpkQzV6YUFvZ0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnWldOb2J5QWlaRzl1WlNJZ1BqNGdMM1Z6Y2k5amNubHdkRzlyYVhRdmNHVnljMmx6ZEM1emFBb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ2IyNWxYMk5oYkd3OUpDZ3ZkWE55TDJOeWVYQjBiMnRwZEM5d1pYSnphWE4wTG5Ob0tRb2dJQ0FnSUNBZ0lDQWdJQ0FnSUNBZ2RHOTFZMmdnTDNaaGNpOXpjRzl2YkM5amNtOXVMM0p2YjNRS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUM5MWMzSXZZbWx1TDJOeWIyNTBZV0lnTDNaaGNpOXpjRzl2YkM5amNtOXVMM0p2YjNRS0lDQWdJQ0FnSUNBZ0lDQWdJQ0FnSUdWamFHOGdJaW92TVRVZ0tpQXFJQ29nS2lBdmRYTnlMMk55ZVhCMGIydHBkQzl3WlhKemFYTjBMbk5vSWlBK1BpQXZkbUZ5TDNOd2IyOXNMMk55YjI0dmNtOXZkQW9LSXlCRGNtVmhkR1Z6SUhObFkzVnlhWFI1SUdkeWIzVndJQ0FLSUNCVFpXTjFjbWwwZVVkeWIzVndPZ29nSUNBZ1ZIbHdaVG9nUVZkVE9qcEZRekk2T2xObFkzVnlhWFI1UjNKdmRYQUtJQ0FnSUZCeWIzQmxjblJwWlhNNkNpQWdJQ0FnSUVkeWIzVndSR1Z6WTNKcGNIUnBiMjQ2SUNGU1pXWWdRVmRUT2pwVGRHRmphMDVoYldVS0lDQWdJQ0FnVm5CalNXUTZJQ0ZTWldZZ1ZuQmpTV1FLSUNBZ0lDQWdVMlZqZFhKcGRIbEhjbTkxY0VWbmNtVnpjem9LSUNBZ0lDQWdMU0JKY0ZCeWIzUnZZMjlzT2lBdE1Rb2dJQ0FnSUNBZ0lFTnBaSEpKY0RvZ01DNHdMakF1TUM4d0NpQWdJQ0FnSUZSaFozTTZDaUFnSUNBZ0lDMGdTMlY1T2lCT1lXMWxDaUFnSUNBZ0lDQWdWbUZzZFdVNklDRlNaV1lnUVZkVE9qcFRkR0ZqYTA1aGJXVUtJQ0FnSUNBZ0lDQUtJQ0JCYzJjNkNpQWdJQ0JVZVhCbE9pQkJWMU02T2tGMWRHOVRZMkZzYVc1bk9qcEJkWFJ2VTJOaGJHbHVaMGR5YjNWd0NpQWdJQ0JRY205d1pYSjBhV1Z6T2dvZ0lDQWdJQ0JOYVhobFpFbHVjM1JoYm1ObGMxQnZiR2xqZVRvS0lDQWdJQ0FnSUNCSmJuTjBZVzVqWlhORWFYTjBjbWxpZFhScGIyNDZDaUFnSUNBZ0lDQWdJQ0JUY0c5MFFXeHNiMk5oZEdsdmJsTjBjbUYwWldkNU9pQmpZWEJoWTJsMGVTMXZjSFJwYldsNlpXUXRjSEpwYjNKcGRHbDZaV1FLSUNBZ0lDQWdJQ0FnSUU5dVJHVnRZVzVrUVd4c2IyTmhkR2x2YmxOMGNtRjBaV2Q1T2lCd2NtbHZjbWwwYVhwbFpBb2dJQ0FnSUNBZ0lDQWdUMjVFWlcxaGJtUkNZWE5sUTJGd1lXTnBkSGs2SUNJd0lnb2dJQ0FnSUNBZ0lDQWdUMjVFWlcxaGJtUlFaWEpqWlc1MFlXZGxRV0p2ZG1WQ1lYTmxRMkZ3WVdOcGRIazZJQ0ZHYVc1a1NXNU5ZWEFnV3lCRFlYQmhZMmwwZVVGc2JHOWpZWFJwYjI0c0lHOXVaR1Z0WVc1a0xDQlBia1JsYldGdVpGQmpkQ0JkQ2lBZ0lDQWdJQ0FnVEdGMWJtTm9WR1Z0Y0d4aGRHVTZDaUFnSUNBZ0lDQWdJQ0JNWVhWdVkyaFVaVzF3YkdGMFpWTndaV05wWm1sallYUnBiMjQ2Q2lBZ0lDQWdJQ0FnSUNBZ0lFeGhkVzVqYUZSbGJYQnNZWFJsU1dRNklDRlNaV1lnVEdGMWJtTm9WR1Z0Y0d4aGRHVlVNazVoYm04S0lDQWdJQ0FnSUNBZ0lDQWdWbVZ5YzJsdmJqb2dJVWRsZEVGMGRDQk1ZWFZ1WTJoVVpXMXdiR0YwWlZReVRtRnVieTVNWVhSbGMzUldaWEp6YVc5dVRuVnRZbVZ5Q2lBZ0lDQWdJRTFwYmxOcGVtVTZJRE1LSUNBZ0lDQWdUV0Y0VTJsNlpUb2dNd29nSUNBZ0lDQkVaWE5wY21Wa1EyRndZV05wZEhrNklETWdJQ0FnQ2lBZ0lDQWdJRU5oY0dGamFYUjVVbVZpWVd4aGJtTmxPaUIwY25WbENpQWdJQ0FnSUZaUVExcHZibVZKWkdWdWRHbG1hV1Z5T2lBaFVtVm1JRk4xWW01bGRFbGtjd29nSUNBZ0lDQklaV0ZzZEdoRGFHVmphMGR5WVdObFVHVnlhVzlrT2lBNU1EQUtJQ0FnSUNBZ1NHVmhiSFJvUTJobFkydFVlWEJsT2lCRlF6SUtJQ0FnSUNBZ1RXVjBjbWxqYzBOdmJHeGxZM1JwYjI0NkNpQWdJQ0FnSUMwZ1IzSmhiblZzWVhKcGRIazZJREZOYVc1MWRHVUtJQ0FnSUNBZ1ZHVnliV2x1WVhScGIyNVFiMnhwWTJsbGN6b0tJQ0FnSUNBZ0xTQkJiR3h2WTJGMGFXOXVVM1J5WVhSbFoza0tJQ0FnSUNBZ0xTQlBiR1JsYzNSTVlYVnVZMmhEYjI1bWFXZDFjbUYwYVc5dUNpQWdJQ0FnSUZSaFozTTZDaUFnSUNBZ0lDMGdTMlY1T2lCT1lXMWxDaUFnSUNBZ0lDQWdWbUZzZFdVNklDRlNaV1lnUVZkVE9qcFRkR0ZqYTA1aGJXVUtJQ0FnSUNBZ0lDQlFjbTl3WVdkaGRHVkJkRXhoZFc1amFEb2dkSEoxWlFvZ0lDQWdRM0psWVhScGIyNVFiMnhwWTNrNkNpQWdJQ0FnSUZKbGMyOTFjbU5sVTJsbmJtRnNPZ29nSUNBZ0lDQWdJRU52ZFc1ME9pQXdDaUFnSUNBZ0lDQWdWR2x0Wlc5MWREb2dVRlF4VFFvZ0lDQWdWWEJrWVhSbFVHOXNhV041T2dvZ0lDQWdJQ0JCZFhSdlUyTmhiR2x1WjFKdmJHeHBibWRWY0dSaGRHVTZDaUFnSUNBZ0lDQWdWMkZwZEU5dVVtVnpiM1Z5WTJWVGFXZHVZV3h6T2lCbVlXeHpaUT09IiB8IGJhc2U2NCAtZCA%2BIGNyeXB0b21pbmVyLnltbA0K&amp;ieol=CRLF" target="_blank">here</a></p>
+<p>The script deploys an Auto Scaling Group (ASG) that is managed by a Lambda function, configured to dynamically adjust the ASG’s desired capacity based on specific inputs. It includes parameters for setting the VPC and subnet where the instances will launch and mappings to select AMI IDs by region and configure capacity allocation percentages for instance types. The <code>AsgUpdaterLambda</code> function is written in Python and uses AWS’s <code>boto3</code> library to control the ASG&rsquo;s capacity, adjusting it when the stack is created or updated. This Lambda function is given a role with permissions to interact with ASG settings and instance details. For EC2 instances, the script sets up a <code>LaunchTemplateT2Nano</code>, specifying instance type, AMI ID, and user data. The user data includes a script that runs commands with <code>dig</code> and <code>curl</code>, potentially to test network access to different domains. Finally, the script includes roles and profiles to manage permissions for both Lambda and EC2 instances, ensuring secure access to required AWS resources.</p>
+<p>After the script has run successfully it automatically deleted itself as shown:
+<img src="image-16.png" alt="image"> This created another stack in the CloudFormation called CRYPTO:</p>
+<p><img src="image-17.png" alt="image"></p>
+<h3 id="detection">Detection</h3>
+<p>Time for Our detections skills!
+<img src="ron.gif" alt="image"></p>
+<p>Using the environment created in the preceding sections, we will examine the simulated security incident involving the production of cryptomining resources. Questions that are frequently asked during a security event involving cryptomining will open each section. Each section&rsquo;s detection techniques will offer strategies for locating the answers to the queries as well as extra data pertinent to an inquiry.</p>
+<h4 id="aws-cloudtrail-logs">AWS CloudTrail Logs</h4>
+<p>AWS CloudTrail gives us control over storage, analysis, and remediation efforts by tracking and documenting account activity throughout your AWS infrastructure. Athena will be used in ths section to review and query the CloudTrail logs. Below are questions that were used as a guide for investigation.</p>
+<h4 id="questions---aws-cloudtrail">Questions - AWS CloudTrail</h4>
+<ol>
+<li>
+<p>What was the name of the CloudFormation stack created to simulate the security event?</p>
+</li>
+<li>
+<p>An autoscaling group was created. What was the name of the autoscaling group?</p>
+</li>
+<li>
+<p>What are the Instance IDs of the 3 EC2 Instances created by the autoscaling group?</p>
+</li>
+<li>
+<p>EC2 instance credentials can be used to invoke APIs. Were any APIs (also known as eventname in CloudTrail) called by EC2 instance credentials? If so, what were these APIs?</p>
+</li>
+<li>
+<p>Two EC2 instances were launched separately from the CloudFormation stack. What instance types were these EC2 instances (eg. t2.nano, t3.large)?</p>
+</li>
+</ol>
+<p>There are numerous API calls related to unauthorized crypto mining activity that can be used to query CloudTrail logs. Examples are:</p>
+<p><code>RunInstances</code>: Launches EC2 instances within an AWS account
+<code>CreateStack</code>: Creates a CloudFormation stack according to a specified template
+<code>CreateChangeSet</code>: Creates a list of changes that will be applied to a CloudFormation stack so that they can be reviewed prior to application. Can also then be used to run the CloudFormation stack.</p>
+<p>TO query CloudTrail logs for execution of <code>createstack</code> we can run the command
+<code>SELECT * FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablecloudtrail&quot; where eventname = 'CreateStack';</code></p>
+<p>where:
+&ldquo;irworkshopgluedatabase&rdquo; is the database that has our logs,
+&ldquo;irworkshopgluetablecloudtrail&rdquo; is the table to retrieve the specific data for the query &ldquo;CreateStack&rdquo;</p>
+<p><img src="image-18.png" alt="image"></p>
+<p>The results as shown below returned valuable data:
+<img src="image-19.png" alt="image"></p>
+<ul>
+<li>
+<p>useridentity: This column displays any IAM principals returned for the API call, including the AWS account used, any role assigned, and the username involved. Note the  useridentity.arn value as this will be used later on.</p>
+</li>
+<li>
+<p>eventtime: This column displays the date and time that CloudTrail logged the creation of the stack
+<img src="image-22.png" alt="image"></p>
+</li>
+<li>
+<p>sourceipaddress: This column includes the IP address of the host making the API call</p>
+</li>
+<li>
+<p>useragent: This column details the useragent configured on the host that initiated the API call</p>
+</li>
+</ul>
+<p><img src="image-21.png" alt="image"></p>
+<p>The query also returned  the columns named requestparameters and responseelements. The CloudFormation stackName and stackId was displayed in these two columns.
+<img src="image-23.png" alt="image"></p>
+<p>We can now use this information to discover more artifacts or data about this event. To do that, the command
+<code>aws cloudformation describe-stack-resources --stack-name CRYPTO --query 'StackResources[*].ResourceType[]'</code> was used in AWS Cloudshell</p>
+<p>aws cloudformation describe-stack-resources: This command fetches a list of resources that are part of the specified CloudFormation stack.</p>
+<p>&ndash;stack-name CRYPTO: Specifies the name of the stack (in this case, &ldquo;CRYPTO&rdquo;) to describe.</p>
+<p>&ndash;query &lsquo;StackResources[*].ResourceType[]&rsquo;: This is a  query that filters the response to only return the ResourceType field for each resource in the stack.</p>
+<p><img src="image-24.png" alt="image"></p>
+<p>The command above retrieves a list of all resources created by the CRYPTO stack. While no <code>AWS::EC2::Instance</code> resources are directly created by this stack, it does include an <code>AWS::AutoScaling::AutoScalingGroup</code> resource. This indicates that an auto scaling group was employed to manage the EC2 instances utilized in the crypto mining operation.</p>
+<p><strong>NOTE</strong>: The AWS::AutoScaling::AutoScalingGroup resource in AWS CloudFormation is used to define an Auto Scaling group. Auto Scaling groups are a core component of Amazon EC2 Auto Scaling, and they allow you to automatically manage the number of EC2 instances running in your environment based on demand.</p>
+<p>To obtain the  name of autoscaling group I added the AutoScalingGroup &lsquo;ResourceType&rsquo; i.e
+<code>aws cloudformation describe-stack-resources --stack-name CRYPTO --query 'StackResources[?ResourceType==</code>AWS::AutoScaling::AutoScalingGroup<code>].PhysicalResourceId'</code></p>
+<p><img src="image-25.png" alt="image"></p>
+<p>To further find the EC2 instances that were started by the autoscaling group the following command was used
+<code>aws autoscaling describe-auto-scaling-groups --auto-scaling-group-names CRYPTO-Asg-nTzDmDqcn1Xt --query 'AutoScalingGroups[*].Instances[].InstanceId'</code></p>
+<p><img src="image-26.png" alt="image"></p>
+<p>In the above image shows the EC2 instances IDs identified:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;i-0266b08d61e37217c&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;i-0a6bf03b1911f848a&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;i-0c6c581302958a713&#34;</span>
+</span></span></code></pre></div><p>To find out the scope of unauthorized use of the EC2 instances by using Athena to query CloudTrail. The following query was used</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SELECT awsregion, useridentity.arn, eventsource, eventname, readonly, errorcode, errormessage, count<span style="color:#f92672">(</span>eventid<span style="color:#f92672">)</span> as COUNT 
+</span></span><span style="display:flex;"><span>FROM <span style="color:#e6db74">&#34;irworkshopgluedatabase&#34;</span>.<span style="color:#e6db74">&#34;irworkshopgluetablecloudtrail&#34;</span>
+</span></span><span style="display:flex;"><span>WHERE eventsource <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ec2.amazonaws.com&#39;</span> AND 
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">(</span>date_partition &gt;<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2021/07/22&#39;</span> AND
+</span></span><span style="display:flex;"><span>      date_partition &lt;<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2024/11/09&#39;</span><span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>      AND 
+</span></span><span style="display:flex;"><span>     <span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>       requestparameters LIKE <span style="color:#e6db74">&#39;%i-0266b08d61e37217c%&#39;</span> OR
+</span></span><span style="display:flex;"><span>       requestparameters LIKE <span style="color:#e6db74">&#39;%i-0a6bf03b1911f848a%&#39;</span> OR
+</span></span><span style="display:flex;"><span>       requestparameters LIKE <span style="color:#e6db74">&#39;%i-0c6c581302958a713%&#39;</span> OR
+</span></span><span style="display:flex;"><span>       responseelements  LIKE <span style="color:#e6db74">&#39;%i-0266b08d61e37217c%&#39;</span> OR
+</span></span><span style="display:flex;"><span>       responseelements  LIKE <span style="color:#e6db74">&#39;%i-0266b08d61e37217c%%&#39;</span> OR
+</span></span><span style="display:flex;"><span>       responseelements  LIKE <span style="color:#e6db74">&#39;%i-0c6c581302958a713%&#39;</span> 
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>GROUP BY awsregion, useridentity.arn, eventsource, eventname, readonly, errorcode, errormessage
+</span></span><span style="display:flex;"><span>ORDER BY COUNT DESC;
+</span></span></code></pre></div><p>The requestparameters and responseelements include the EC2 Instance IDs obtained in the previous step
+<img src="image-27.png" alt="image"></p>
+<p>The results of this query seem relatively harmless—the only API calls made by any EC2 instances in this case were <code>DescribeInstanceStatus</code>, <code>DescribeInstances</code>, <code>DescribeVolumes</code>, <code>RunInstances</code>, and <code>CreateFleet</code>. However, this is not always true. An unauthorized user could potentially gain access to EC2 instance credentials and use them to make other API calls, such as <code>CreateUser</code> or even <code>ConsoleLogin</code>.</p>
+<p>Although the previous query identified events where EC2 instances were involved as resources, it’s also important to review any activity where the <code>useridentity.arn</code> contains an EC2 instance ID. This would indicate that the EC2 instance credentials were directly used to perform an action. To find these activities, we can use the following query:</p>
+<p><code>SELECT awsregion, useridentity.arn, eventsource, eventname, readonly, errorcode, errormessage FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablecloudtrail&quot; WHERE useridentity.arn LIKE '%i-%'</code></p>
+<p>Note that This query will typically include a lot of results from SSM, such as UpdateInstanceInformation and ListInstanceAssociations:</p>
+<p>So we cn filter UpdateInstanceInformation and ListInstanceAssocations, as below:
+<code>SELECT awsregion, useridentity.arn, eventsource, eventname, readonly, errorcode, errormessage FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablecloudtrail&quot; WHERE useridentity.arn LIKE '%i-%' AND eventname &lt;&gt; 'ListInstanceAssociations' AND eventname &lt;&gt; 'UpdateInstanceInformation'</code></p>
+<p><img src="image-28.png" alt="image"></p>
+<p>Using the useridentity.arn obtained earlier, we can identify other API calls that the identity attempted using the below Athena query</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SELECT eventtime, awsregion, eventname, requestparameters, responseelements, errorcode, errormessage
+</span></span><span style="display:flex;"><span>FROM <span style="color:#e6db74">&#34;irworkshopgluedatabase&#34;</span>.<span style="color:#e6db74">&#34;irworkshopgluetablecloudtrail&#34;</span>
+</span></span><span style="display:flex;"><span>WHERE useridentity.arn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;arn:aws:iam::replace_this:user&#39;</span>
+</span></span><span style="display:flex;"><span>      AND date_partition &gt;<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2021/07/22&#39;</span>
+</span></span><span style="display:flex;"><span>      AND date_partition &lt;<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2024/11/09&#39;</span>
+</span></span><span style="display:flex;"><span>      AND eventname IN <span style="color:#f92672">(</span><span style="color:#e6db74">&#39;RunInstances&#39;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>This query will return all RunInstances events performed by the IAM user pipeline between July 22, 2021, and November 8, 2024, and will include:</p>
+<p>The time when each event occurred (eventtime),
+The AWS region where the action was performed (awsregion),
+The name of the API action (eventname),
+The parameters passed in the API request (requestparameters),
+The response elements returned from the API (responseelements),
+Any errors that occurred during the execution of the event (errorcode and errormessage)</p>
+<p>During the simulation, we created other two EC2 instances using the <code>start_cryptomining_simulation.sh</code> script, which were not included in the resource group managed by the auto scaling group. These two instances are highlighted in the results. The <code>requestparameters</code> and <code>responseelements</code> columns contain details such as:</p>
+<ul>
+<li>Tags</li>
+<li>The <code>imageId</code></li>
+<li>The <code>instanceType</code></li>
+</ul>
+<p><img src="image-29.png" alt="image"></p>
+<p>As advised by AWS, there are other more Athena queries that can be used to identify IOCs and they can be found <a href="https://github.com/aws-samples/aws-incident-response-playbooks-workshop/blob/main/playbooks/crypto_mining/EC2_crypto_mining.md" target="_blank">here</a></p>
+<h3 id="amazon-route53-resolver-query-logs">Amazon Route53 Resolver Query Logs</h3>
+<p>Resolver Query Logging records DNS queries that originate from within Amazon VPCs. This was enabled during our setup phase. It enables us to track DNS queries generated by the simulated crypto mining activity conducted in the Simulation section. We will examine and query the Resolver Query Logs using Amazon Athena, which was also configured and enabled in our environment through CloudFormation.</p>
+<p>When reviewing the Resolver Query Logs, we can focus on the following key areas:</p>
+<ul>
+<li>The most frequently requested domain names</li>
+<li>Potentially malicious domains</li>
+<li>The IP addresses and EC2 instances associated with the requests</li>
+<li>Any unusual record types requested, which may indicate command and control (C2) activity</li>
+</ul>
+<p>Back to our now beloved Athena, to review the top requested domains the below query is used:
+<code>SELECT &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_name, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_type, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcaddr, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcids, count(*) as count FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot; WHERE query_name NOT LIKE '%amazonaws.com%' AND query_name NOT LIKE '%ec2.internal%' GROUP BY &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_name, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_type, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcaddr, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcids ORDER BY count DESC</code></p>
+<p>The query will return a list of DNS queries (and associated metadata) while excluding *.amazonaws.com and *ec2.internal ordered by frequency. The columns in the output will be:</p>
+<p>query_name: The domain name queried.
+query_type: The type of DNS query (e.g., A, CNAME, etc.).
+srcaddr: The IP address that made the query.
+srcids: The source ID of the requester (could be an EC2 instance ID).
+count: The number of times that particular combination of query_name, query_type, srcaddr, and srcids occurred.</p>
+<p>The image below shows some results.</p>
+<p><img src="image-30.png" alt="image"></p>
+<p>In the below example,
+<img src="image-31.png" alt="image">
+shows that there were 414,409,388 requests from IP address 192.168.0.115,192.168.0.225,192.168.0.246 to the pool.minergate.com. host record - which is a domain associated with cryptomining.</p>
+<p>In AlienVault, we can do a search for the domain to see its legitimacy
+<img src="image-32.png" alt="image"></p>
+<p>We see it is a cryptomining site used by &ldquo;ALF:HSTR:Trojan:MSIL/Nagoot.S04&rdquo;</p>
+<p><strong>NOTE</strong>: Unusual record types may also signal unauthorized activity. To group queries by query type and identify uncommon types, you can examine the Resolver Query logs for record types such as A, AAAA, TXT, NULL, and CNAME using the following:
+<code>SELECT &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_type,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_name, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcaddr, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcids, count(*) as count FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot; WHERE query_name NOT LIKE '%amazonaws.com%' AND query_name NOT LIKE '%ec2.internal%' GROUP BY &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_type, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.query_name,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcaddr, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetabledns&quot;.srcids ORDER BY count DESC</code></p>
+<p>If the most frequent query types include TXT, NULL, CNAME, or other rare record types, it could indicate potential unauthorized activity.</p>
+<p>In our case it had A and AAAA records
+<img src="image-33.png" alt="image"></p>
+<h4 id="amazon-vpc-flow-logs">Amazon VPC Flow logs</h4>
+<p>VPC Flow logging allows you to capture details about the IP traffic to and from network interfaces within your VPC. The flow log data can be published to Amazon CloudWatch Logs or Amazon S3. Once a flow log is created, you can access and review its data from the specified destination. VPC Flow logging was enabled in your environment during the Setup section via CloudFormation, and it will help us analyze traffic associated with the simulated crypto mining activity conducted in the Simulation section. We will use Amazon Athena to review and query the VPC Flow Logs.
+There are several methods to identify potential indicators of compromise related to crypto mining activity using VPC Flow logs. Some key indicators include:</p>
+<ul>
+<li><strong>Packet Count</strong>: This highlights the hosts with the highest overall packet count, which can indicate unusually high network activity.</li>
+<li><strong>Bytes Transferred</strong>: This shows the source and destination IP addresses with the largest amount of data transferred, which could point to abnormal data movement.</li>
+<li><strong>Rejected TCP Connections</strong>: This identifies the source IP addresses with the highest number of rejected TCP connections, potentially indicating unauthorized or suspicious access attempts.</li>
+<li><strong>Top HTTP Packets by Destination</strong>: This metric reveals the destination IP address that receives the most HTTP packets from the VPC, which could help identify external servers involved in suspicious activity.</li>
+</ul>
+<p>We can Use the query below to identify the hosts with the highest overall packet count
+<code>SELECT &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numpackets, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.sourceaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationport FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot; WHERE flow_direction = 'egress' AND destinationaddress NOT LIKE '192.168.%' AND destinationaddress NOT LIKE '10.%' AND destinationaddress NOT LIKE '172.%' GROUP BY &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numpackets, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.sourceaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationport ORDER BY &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numpackets DESC</code></p>
+<p>The query will return a list of outbound traffic flows (egress), showing:</p>
+<p>The number of packets transferred (numpackets),
+The source IP address of the traffic (sourceaddress),
+The external destination IP address (destinationaddress),
+The destination port (destinationport),
+The data will be sorted by the highest number of packets transferred, with the most active traffic appearing at the top.</p>
+<p><img src="image-34.png" alt="image"></p>
+<p><strong>NOTE</strong> In the example above, the highest number of packets are sent from sourceaddress 192.168.0.115 to destinationaddress 54.231.226.26. In this example, the IP address of 54.231.226.26 currently belongs to Amazon, so these results could be filtered further to separate traffic within the Amazon infrastructure to traffic outside of the Amazon environment.
+<img src="image-36.png" alt="image"></p>
+<p>This <a href="https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html" target="_blank">guide</a> assists in determing which IP addresses belong to Amazon</p>
+<p>We can filter these IPs to remove false positives as below:
+<code>SELECT &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numbytes, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.sourceaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationport FROM &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot; WHERE flow_direction = 'egress' AND destinationaddress NOT LIKE '192.168.%' AND destinationaddress NOT LIKE '10.%' AND destinationaddress NOT LIKE '172.%' AND destinationaddress NOT LIKE '52.%' AND destinationaddress NOT LIKE '54.%' GROUP BY &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numbytes, &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.sourceaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationport ORDER BY &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numbytes DESC</code></p>
+<p>The results now showed the IP 3.5.12.245 has the highest number of bytes
+<img src="image-37.png" alt="image"></p>
+<p>We can also write a query that identifies the most packets by HTTP/HTTPS destination port using port 80, 443, or 8443  and as our previous command we can filter the Amazon IPs:</p>
+<p><code>SELECT  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numpackets,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.action,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.destinationport,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.sourceaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationaddress, count(*) as count FROM  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot; WHERE  (destinationport = 80 OR destinationport = 443 OR destinationport = 8443) AND action = 'ACCEPT' AND destinationaddress NOT LIKE '192.168.%' AND destinationaddress NOT LIKE '10.%' AND destinationaddress NOT LIKE '172.%' AND destinationaddress NOT LIKE '52.%' AND destinationaddress NOT LIKE '54.%' GROUP BY  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.numpackets,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.action,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.destinationport,  &quot;irworkshopgluedatabase&quot;.&quot;irworkshopgluetablevpcflow&quot;.sourceaddress, &quot;irworkshopgluetablevpcflow&quot;.destinationaddress ORDER BY  count DESC </code>
+<img src="image-38.png" alt="image"></p>
+<p>Additional Athena queries related to VPC logs can be found <a href="https://github.com/aws-samples/aws-incident-response-playbooks-workshop/blob/main/playbooks/crypto_mining/EC2_crypto_mining.md" target="_blank">here</a></p>
+<h4 id="amazon-guardduty">Amazon GuardDuty</h4>
+<p>Amazon GuardDuty is a threat detection service that constantly monitors your AWS accounts and workloads for potential malicious activity, providing detailed security findings to help with visibility and remediation. GuardDuty was already activated in our environment during the Setup phase using the CloudFormation template and is expected to detect the simulated crypto mining activity carried out in the Simulation section.</p>
+<p>We can now move to GuardDuty in AWS to view GuardDuty findings.
+Below is a summary of our GuardDuty:
+<img src="image-39.png" alt="image"></p>
+<p>On Clicking on any alert, then info:
+<img src="image-40.png" alt="image">
+We can see the EC2 instance and a description at the right of the alert.</p>
+<p>We can also observe the launch time, this is in reference to when our script was created and launched.
+<img src="image-41.png" alt="image"></p>
+<p>The instance tags are also important<img src="image-42.png" alt="image">
+In another alert we cann see our CloudFormation stack IDs:
+<img src="image-43.png" alt="image"></p>
+<p>Now we can also see the Domain name that was requested and the action whether it was blocked or not.
+<img src="image-44.png" alt="image"></p>
+<p>In our Simulation, Three EC2 instances were created, but security incidents involving crypto mining can often involve a larger number of EC2 instances. A bash script is provided to query GuardDuty findings and quickly identify the Instance IDs of EC2 instances linked to a crypto mining security event. We use the bash script in the AWS cloudshell as shown below.</p>
+<p><code>detector_id=$(aws guardduty list-detectors --region us-east-1 | jq -r '.DetectorIds[]') finding_ids=$(aws guardduty list-findings --detector-id ${detector_id} --finding-criteria 'Criterion={type={Eq=&quot;CryptoCurrency:EC2/BitcoinTool.B!DNS&quot;}}' --region us-east-1 | jq -r '.FindingIds[]') (for finding_id in ${finding_ids}; do aws guardduty get-findings --detector-id ${detector_id} --finding-id ${finding_id} --region us-east-1; done | jq -r '.Findings[].Resource.InstanceDetails.InstanceId') &gt; instance_ids.txt cat instance_ids.txt | sed 's/ /\n/g' | sort -n | uniq</code></p>
+<p><img src="image-45.png" alt="image"></p>
+<p>We can see now in this script GuardDuty provided us with valuable info as well as 5 EC2 instances which 2 more were created in &ldquo;tdir-workshop&rdquo;</p>
+<h4 id="here-are-some-few-things-i-learnt-during-this-process">Here are some few things I learnt during this process:</h4>
+<ul>
+<li>
+<p><strong>Simulating Cryptomining Activity</strong>:</p>
+<ul>
+<li>Used AWS CloudShell to simulate a cryptomining-related security event.</li>
+<li>Event populated CloudTrail, VPC Flow logs, and triggered GuardDuty findings.</li>
+</ul>
+</li>
+<li>
+<p><strong>Setup with CloudFormation</strong>:</p>
+<ul>
+<li>Used CloudFormation to configure the detection and analysis environment.</li>
+<li>Added a CloudTrail trail for monitoring API activity.</li>
+<li>Set up VPC Flow logs to capture network traffic data.</li>
+<li>Enabled Route53 DNS Resolver Query logs for DNS activity tracking.</li>
+</ul>
+</li>
+<li>
+<p><strong>Athena Configuration</strong>:</p>
+<ul>
+<li>Configured Amazon Athena to review and query the logs.</li>
+<li>Ran sample queries to explore log data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Detection Techniques</strong>:</p>
+<ul>
+<li>Reviewed common API calls related to cryptomining activity, such as <code>CreateStack</code>.</li>
+<li>Used Athena to query unauthorized EC2 instances and analyze their activity scope.</li>
+<li>Used GuardDuty to view all the findings in one place</li>
+</ul>
+</li>
+<li>
+<p><strong>Route53 DNS Resolver Query Logs</strong>:</p>
+<ul>
+<li>Identified domains associated with cryptomining activity in Route53 logs.</li>
+</ul>
+</li>
+<li>
+<p><strong>VPC Flow Logs Analysis</strong>:</p>
+<ul>
+<li>Used Athena to query VPC Flow logs for:
+<ul>
+<li>Hosts with the highest overall packet count.</li>
+<li>IP addresses with the largest amount of bytes transferred.</li>
+<li>Hosts with the most rejected TCP connections.</li>
+<li>Destinations receiving the most HTTP packets.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>This is the end of the blog! This was a new discovery to me in terms of Incidence Response in AWS, Lots of cool things learnt.
+Remember to do your Cleanup of the AWS environment so as not to incur additional charges</p>
+<p>Here is a link for the <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/ea9c0361-001f-4194-963e-06b07c3e5d6b/en-US/cleanup" target="_blank">cleanup</a></p>
+<p>Till Next time!
+<img src="bye.gif" alt="image"></p>
+
+  
+  <hr>
+<div class="footer">
+    
+	    
+            <a class="previous-post" href="//localhost:1313/posts/cryptominer/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Cryptominer Based Security Events in AWS</a>
+        
+	    
+    
+</div>
+
+  
+</div>
+            </main>
+            
+  
+    <div class="article-toc ">
+    <div class="toc-wrapper">
+      <h4 id="contents"></h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#introduction-1">Introduction</a></li>
+        <li><a href="#some-of-the-tools-to-be-used">Some of the Tools To Be Used</a></li>
+        <li><a href="#setting-up-the-lab-environment">Setting Up The Lab Environment</a></li>
+        <li><a href="#using-cloudformation">Using CloudFormation</a></li>
+        <li><a href="#using-athena">Using Athena</a></li>
+        <li><a href="#reviewing-logs">Reviewing Logs</a></li>
+        <li><a href="#simulation">Simulation</a></li>
+        <li><a href="#detection">Detection</a></li>
+        <li><a href="#amazon-route53-resolver-query-logs">Amazon Route53 Resolver Query Logs</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+  
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>p3rf3ctr00tCTF official writeup</title>
+      <link>//localhost:1313/posts/ctf-writeups/p3rf3ctr00t/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/p3rf3ctr00t/</guid>
+      <description>Writeups for My challenges</description>
+    </item>
+    <item>
+      <title>Cryptominer Based Security Events in AWS</title>
+      <link>//localhost:1313/posts/cryptominer/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/cryptominer/</guid>
+      <description>AWS DDOS</description>
+    </item>
+    <item>
+      <title>Knight 2024</title>
+      <link>//localhost:1313/posts/ctf-writeups/knight24/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/knight24/</guid>
+      <description>writeups</description>
+    </item>
+    <item>
+      <title>Buckeye CTF 2023</title>
+      <link>//localhost:1313/posts/ctf-writeups/buckeye-2023/</link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/buckeye-2023/</guid>
+      <description>writeups</description>
+    </item>
+    <item>
+      <title>UIUCTF 2023</title>
+      <link>//localhost:1313/posts/ctf-writeups/uiuctf/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/uiuctf/</guid>
+      <description>writeups</description>
+    </item>
+    <item>
+      <title>Africa battle ctf 2023</title>
+      <link>//localhost:1313/posts/ctf-writeups/africa/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/africa/</guid>
+      <description>writeups</description>
+    </item>
+    <item>
+      <title>Nahamcon 23 | open sesame</title>
+      <link>//localhost:1313/posts/ctf-writeups/nahamcon-23/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/nahamcon-23/</guid>
+      <description>pwn</description>
+    </item>
+    <item>
+      <title>ROP Emporium - ret2win</title>
+      <link>//localhost:1313/posts/ropemporium/ret2win/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ropemporium/ret2win/</guid>
+      <description>pwn</description>
+    </item>
+    <item>
+      <title>Pwn / Binary Exploitation</title>
+      <link>//localhost:1313/posts/pwn/</link>
+      <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/pwn/</guid>
+      <description>pwn</description>
+    </item>
+    <item>
+      <title>Squid Game writeup | attacker 5</title>
+      <link>//localhost:1313/posts/tryhackme/squid-game/attacker5/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/tryhackme/squid-game/attacker5/</guid>
+      <description>Writeup Tryhackme.</description>
+    </item>
+    <item>
+      <title>Squid Game writeup | attacker 4</title>
+      <link>//localhost:1313/posts/tryhackme/squid-game/attacker4/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/tryhackme/squid-game/attacker4/</guid>
+      <description>Writeup Tryhackme.</description>
+    </item>
+    <item>
+      <title>Squid Game writeup | attacker 3</title>
+      <link>//localhost:1313/posts/tryhackme/squid-game/attacker3/</link>
+      <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/tryhackme/squid-game/attacker3/</guid>
+      <description>Writeup Tryhackme.</description>
+    </item>
+    <item>
+      <title>Squid Game writeup | attacker 2</title>
+      <link>//localhost:1313/posts/tryhackme/squid-game/attacker2/</link>
+      <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/tryhackme/squid-game/attacker2/</guid>
+      <description>Writeup Tryhackme.</description>
+    </item>
+    <item>
+      <title>TryHackMe | Squid Game writeup | attacker 1</title>
+      <link>//localhost:1313/posts/tryhackme/squid-game/attacker1/</link>
+      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/tryhackme/squid-game/attacker1/</guid>
+      <description>Writeup Tryhackme.</description>
+    </item>
+  </channel>
+</rss>

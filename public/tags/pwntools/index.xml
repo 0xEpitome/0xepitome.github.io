@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pwntools on </title>
+    <link>//localhost:1313/tags/pwntools/</link>
+    <description>Recent content in Pwntools on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Jun 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/pwntools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nahamcon 23 | open sesame</title>
+      <link>//localhost:1313/posts/ctf-writeups/nahamcon-23/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/nahamcon-23/</guid>
+      <description>pwn</description>
+    </item>
+    <item>
+      <title>ROP Emporium - ret2win</title>
+      <link>//localhost:1313/posts/ropemporium/ret2win/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ropemporium/ret2win/</guid>
+      <description>pwn</description>
+    </item>
+    <item>
+      <title>Pwn / Binary Exploitation</title>
+      <link>//localhost:1313/posts/pwn/</link>
+      <pubDate>Mon, 19 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/pwn/</guid>
+      <description>pwn</description>
+    </item>
+  </channel>
+</rss>

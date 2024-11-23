@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on </title>
+    <link>//localhost:1313/tags/about/</link>
+    <description>Recent content in About on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;h2 id=&#34;quick-intro&#34;&gt;Quick Intro&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to my world of cybersecurity! I am passionate about all things related to malware analysis, CTF (Capture The Flag) challenge and also SOC. Let me introduce myself and share my journey with you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;who-am-i&#34;&gt;Who Am I?&lt;/h2&gt;&#xA;&lt;p&gt;I am a Bsc. Computer Security and Forensics graduate with a good background in cybersecurity. I am a newbie in the fascinating field of malware analysis, where I unravel the intricacies of malicious software and uncover their inner workings. It gives me chills literally analyzing malwares to know how they behave. I also have the certified in cybersecurity certificate.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

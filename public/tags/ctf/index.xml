@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CTF on </title>
+    <link>//localhost:1313/tags/ctf/</link>
+    <description>Recent content in CTF on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>p3rf3ctr00tCTF official writeup</title>
+      <link>//localhost:1313/posts/ctf-writeups/p3rf3ctr00t/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/ctf-writeups/p3rf3ctr00t/</guid>
+      <description>Writeups for My challenges</description>
+    </item>
+  </channel>
+</rss>

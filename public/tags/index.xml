@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on </title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTF</title>
+      <link>//localhost:1313/tags/ctf/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/ctf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>P3rf3ctr00t</title>
+      <link>//localhost:1313/tags/p3rf3ctr00t/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/p3rf3ctr00t/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writeups</title>
+      <link>//localhost:1313/tags/writeups/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/writeups/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>//localhost:1313/tags/aws/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crypto</title>
+      <link>//localhost:1313/tags/crypto/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/crypto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Detection</title>
+      <link>//localhost:1313/tags/detection/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/detection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post</title>
+      <link>//localhost:1313/tags/post/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/post/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pwn</title>
+      <link>//localhost:1313/tags/pwn/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/pwn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pwntools</title>
+      <link>//localhost:1313/tags/pwntools/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/pwntools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writeup</title>
+      <link>//localhost:1313/tags/writeup/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/writeup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ROP</title>
+      <link>//localhost:1313/tags/rop/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/rop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Maldocs</title>
+      <link>//localhost:1313/tags/maldocs/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/maldocs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware Analysis</title>
+      <link>//localhost:1313/tags/malware-analysis/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/malware-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Squid Game</title>
+      <link>//localhost:1313/tags/squid-game/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/squid-game/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tryhackme</title>
+      <link>//localhost:1313/tags/tryhackme/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/tryhackme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/tags/about/</link>
+      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/about/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
